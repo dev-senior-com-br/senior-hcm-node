@@ -1,4 +1,4 @@
-export class EmployeeIn {
+export default class EmployeeIn {
 
     /**
      * Id do colaborador

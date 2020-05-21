@@ -1,11 +1,11 @@
-export class VacancyDetailsIn {
+export default class VacancyDetailsIn {
 
     /**
      * Identificador único da vaga.
      */
-    private _id : string;
+    private _id: string;
 
-    public set id(value: string){
+    public set id(value: string) {
         this._id = value;
     }
 
@@ -16,9 +16,9 @@ export class VacancyDetailsIn {
     /**
      * Id do contrato ativo no analytics
      */
-    private _activeEmployeeId : string;
+    private _activeEmployeeId: string;
 
-    public set activeEmployeeId(value: string){
+    public set activeEmployeeId(value: string) {
         this._activeEmployeeId = value;
     }
 
@@ -30,9 +30,9 @@ export class VacancyDetailsIn {
      * Indica que a primitiva foi chamada pelo recrutamento legado (base HCM), default é true.
      */
 
-    private _fromRecruitment : boolean = true;
+    private _fromRecruitment: boolean = true;
 
-    public set fromRecruitment(value: boolean){
+    public set fromRecruitment(value: boolean) {
         this._fromRecruitment = value;
     }
 

@@ -1,4 +1,4 @@
-export class VacanciesIn {
+export default class VacanciesIn {
 
     /**
      * Motivo da abertura da vaga
@@ -9,7 +9,7 @@ export class VacanciesIn {
         return this._reason;
     }
 
-    public set reason (value: string) {
+    public set reason(value: string) {
         this._reason = value;
     }
 
@@ -61,7 +61,7 @@ export class VacanciesIn {
         this._responsibles = value;
     }
 
-    public get responsibles(){
+    public get responsibles() {
         return this._responsibles;
     }
 
@@ -92,7 +92,7 @@ export class VacanciesIn {
     }
 
     /**
-     *Data mínima para a conclusão da vaga.
+     * Data mínima para a conclusão da vaga.
      */
     private _minConclusionDate: Date;
 
@@ -105,7 +105,7 @@ export class VacanciesIn {
     }
 
     /**
-     *Data máxima para a conclusão da vaga.
+     * Data máxima para a conclusão da vaga.
      */
     private _maxConclusionDate: Date;
 
@@ -118,7 +118,7 @@ export class VacanciesIn {
     }
 
     /**
-     *Solicitantes das vagas a serem considerados.
+     * Solicitantes das vagas a serem considerados.
      */
     private _requesters: string;
 
@@ -131,7 +131,7 @@ export class VacanciesIn {
     }
 
     /**
-     *Cargos das vagas a serem considerados.
+     * Cargos das vagas a serem considerados.
      */
     private _positions: string;
 
@@ -144,7 +144,7 @@ export class VacanciesIn {
     }
 
     /**
-     *Progresso mínimo das vagas.
+     * Progresso mínimo das vagas.
      */
     private _minProgress: number;
 
@@ -168,7 +168,7 @@ export class VacanciesIn {
     public get maxProgress() {
         return this._maxProgress;
     }
-        
+
     /**
      * Data de referência.
      */
@@ -183,7 +183,7 @@ export class VacanciesIn {
     }
 
     /**
-     *Índice da página a ser retornada. Padrão 0.
+     * Índice da página a ser retornada. Padrão 0.
      */
     private _page: number;
 
@@ -209,7 +209,7 @@ export class VacanciesIn {
     }
 
     /**
-     *Flag indicando que será filtrado por solicitante, considerando hierarquia (liderados diretos e indiretos). Nesse caso, mesmo se o usuário for gestor (possuir permissão para visualizar todas as vagas), será considerada a hierarquia.
+     * Flag indicando que será filtrado por solicitante, considerando hierarquia (liderados diretos e indiretos). Nesse caso, mesmo se o usuário for gestor (possuir permissão para visualizar todas as vagas), será considerada a hierarquia.
      */
     private _considerHierarchy: boolean;
 
@@ -222,7 +222,7 @@ export class VacanciesIn {
     }
 
     /**
-     *Ticket dos filtros do Analytics (ID dos filtros aplicados no Analytics)
+     * Ticket dos filtros do Analytics (ID dos filtros aplicados no Analytics)
      */
     private _ticket: string;
 
@@ -235,7 +235,7 @@ export class VacanciesIn {
     }
 
     /**
-     *Id do contrato ativo no analytics.
+     * Id do contrato ativo no analytics.
      */
     private _activeEmployeeId: string;
 
@@ -248,7 +248,7 @@ export class VacanciesIn {
     }
 
     /**
-     *Flag que identifica que se a chamada vem do Analytics
+     * Flag que identifica que se a chamada vem do Analytics
      */
     private _fromAnalytics: boolean;
 

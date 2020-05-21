@@ -1,11 +1,11 @@
-import { Ordination } from "../model/Ordination";
+import Ordination from "./Ordination";
 
-export class Pagination {
+export default class Pagination {
 
     /**
      * Página de inicio
-     */       
-    private _current : number;
+     */
+    private _current: number;
 
     public set current(value: number) {
         this._current = value;
@@ -18,7 +18,7 @@ export class Pagination {
     /**
      * Quantidade de páginas (iniciando por 1)
      */
-    private _size : number;
+    private _size: number;
 
     public set size(value: number) {
         this._size = value;
@@ -31,7 +31,7 @@ export class Pagination {
     /**
      * Ordenar por
      */
-    private _orderBy : Ordination;
+    private _orderBy: Ordination;
 
     public set orderBy(value: Ordination) {
         this._orderBy = value;

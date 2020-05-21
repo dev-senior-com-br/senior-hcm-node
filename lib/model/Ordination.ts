@@ -1,11 +1,11 @@
 import { DirectionType } from "../enum/DirectionType";
 
-export class Ordination {
+export default class Ordination {
 
     /**
      * Campo que será ordenado
      */
-    private _field : string;
+    private _field: string;
 
     public set field(value: string) {
         this._field = value;
@@ -17,8 +17,8 @@ export class Ordination {
 
     /**
      * Tipo da ordenação
-     */    
-    private _direction : DirectionType;
+     */
+    private _direction: DirectionType;
 
     public set direction(value: DirectionType) {
         this._direction = value;

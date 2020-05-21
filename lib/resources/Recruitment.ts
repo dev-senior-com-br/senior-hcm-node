@@ -1,18 +1,18 @@
 import RequestClient from "@seniorsistemas/senior-core/lib/base/RequestClient";
-import SeniorApi from "@seniorsistemas/senior-core/lib/SeniorApi";
-import { VacanciesIn } from "../model/recruitment/VacanciesIn";
+import VacanciesIn from "../model/recruitment/VacanciesIn";
 import { HttpMethod } from "@seniorsistemas/senior-core/lib/model/HttpMethod";
+import HCMApi from "../HCMApi";
 
 export default class Recruitment extends RequestClient {
     private _client: RequestClient;
 
-    constructor(seniorApi: SeniorApi) {
-        super(seniorApi);
+    constructor(hcmApi: HCMApi) {
+        super(hcmApi);
     }
 
-   /* postVacancy = (vacancy : Vacancy) => {
-        return this.seniorApi.getEntity('hcm', 'recruitment', 'vacancy').post(vacancy);
-    }*/
+    /* postVacancy = (vacancy : Vacancy) => {
+         return this.seniorApi.getEntity('hcm', 'recruitment', 'vacancy').post(vacancy);
+     }*/
 
     listVacancies = (vacanciesIn: VacanciesIn) => {
         let vacanciesJSON = JSON.stringify(vacanciesIn);
@@ -43,7 +43,7 @@ export default class Recruitment extends RequestClient {
         };
         return this.request(clientOptions);
     };
-    
+
     vacancyDetailsSummary = (vacanciesIn: VacanciesIn) => {
         let vacanciesJSON = JSON.stringify(vacanciesIn);
         const clientOptions = {
@@ -57,7 +57,7 @@ export default class Recruitment extends RequestClient {
             }
         };
         return this.request(clientOptions);
-    };    
+    };
 
     searchPersons = (vacanciesIn: VacanciesIn) => {
         let vacanciesJSON = JSON.stringify(vacanciesIn);
@@ -72,8 +72,8 @@ export default class Recruitment extends RequestClient {
             }
         };
         return this.request(clientOptions);
-    };    
-    
+    };
+
     dependentQuery = (vacanciesIn: VacanciesIn) => {
         let vacanciesJSON = JSON.stringify(vacanciesIn);
         const clientOptions = {
@@ -87,8 +87,8 @@ export default class Recruitment extends RequestClient {
             }
         };
         return this.request(clientOptions);
-    };    
-    
+    };
+
     dependentListQuery = (vacanciesIn: VacanciesIn) => {
         let vacanciesJSON = JSON.stringify(vacanciesIn);
         const clientOptions = {
@@ -102,5 +102,5 @@ export default class Recruitment extends RequestClient {
             }
         };
         return this.request(clientOptions);
-    };    
+    };
 }

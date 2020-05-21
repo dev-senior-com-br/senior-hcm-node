@@ -1,11 +1,11 @@
-import { Pagination } from "../../model/Pagination";
+import Pagination from "../Pagination";
 
-export class DependentListIn {
+export default class DependentListIn {
 
     /**
      * Id do colaborador
      */
-    private _employeeId : string;
+    private _employeeId: string;
 
     public set employeeId(value: string) {
         this._employeeId = value;
@@ -18,7 +18,7 @@ export class DependentListIn {
     /**
      * Paginação da busca
      */
-    private _page : Pagination;
+    private _page: Pagination;
 
     public set page(value: Pagination) {
         this._page = value;
