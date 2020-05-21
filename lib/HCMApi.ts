@@ -1,5 +1,5 @@
 import Recruitment from "./resources/Recruitment";
-import SeniorApi from "@seniorsistemas/senior-core/lib/SeniorApi";
+import SeniorApi from "./SeniorApi";
 
 export default class HCMApi extends SeniorApi {
     _recruitment: Recruitment;

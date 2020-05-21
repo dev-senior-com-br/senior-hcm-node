@@ -1,7 +1,7 @@
-import RequestClient from "@seniorsistemas/senior-core/lib/base/RequestClient";
 import VacanciesIn from "../model/recruitment/VacanciesIn";
-import { HttpMethod } from "@seniorsistemas/senior-core/lib/model/HttpMethod";
 import HCMApi from "../HCMApi";
+import RequestClient from "../base/RequestClient";
+import { HttpMethod } from "../model/HttpMethod";
 
 export default class Recruitment extends RequestClient {
     private _client: RequestClient;
