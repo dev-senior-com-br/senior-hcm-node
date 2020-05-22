@@ -1,6 +1,7 @@
 import Ordination from "./Ordination";
+import { BaseModel } from "./BaseModel";
 
-export default class Pagination {
+export default class Pagination extends BaseModel {
 
     /**
      * Página de inicio

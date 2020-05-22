@@ -2,6 +2,8 @@ import VacanciesIn from "../model/recruitment/VacanciesIn";
 import HCMApi from "../HCMApi";
 import RequestClient from "../base/RequestClient";
 import { HttpMethod } from "../model/HttpMethod";
+import VacancyDetailsIn from "../model/recruitment/VacancyDetailsIn";
+import { VacancyDetailsSummaryIn, SearchPersonsIn } from "../..";
 
 export default class Recruitment extends RequestClient {
     private _client: RequestClient;
@@ -10,18 +12,14 @@ export default class Recruitment extends RequestClient {
         super(hcmApi);
     }
 
-    /* postVacancy = (vacancy : Vacancy) => {
-         return this.seniorApi.getEntity('hcm', 'recruitment', 'vacancy').post(vacancy);
-     }*/
-
     listVacancies = (vacanciesIn: VacanciesIn) => {
-        let vacanciesJSON = JSON.stringify(vacanciesIn);
+        const vacanciesJSON = JSON.parse(vacanciesIn.toJsonString());
         const clientOptions = {
-            url: "/rest/platform/hcm/recruitment/queries/listVacancies",
+            url: "/rest/hcm/recruitment/queries/listVacancies",
             method: HttpMethod.POST,
-            data: {
+            data:
                 vacanciesJSON
-            },
+            ,
             headers: {
                 authorization: this.seniorApi.accessToken
             }
@@ -29,14 +27,14 @@ export default class Recruitment extends RequestClient {
         return this.request(clientOptions);
     };
 
-    vacancyDetails = (vacanciesIn: VacanciesIn) => {
-        let vacanciesJSON = JSON.stringify(vacanciesIn);
+    vacancyDetails = (vacancyDetailsIn: VacancyDetailsIn) => {
+        const vacancyDetailsInJSON = JSON.parse(vacancyDetailsIn.toJsonString());
         const clientOptions = {
-            url: "/rest/platform/hcm/recruitment/queries/vacancyDetails",
+            url: "/rest/hcm/recruitment/queries/vacancyDetails",
             method: HttpMethod.POST,
-            data: {
-                vacanciesJSON
-            },
+            data:
+                vacancyDetailsInJSON
+            ,
             headers: {
                 authorization: this.seniorApi.accessToken
             }
@@ -44,14 +42,31 @@ export default class Recruitment extends RequestClient {
         return this.request(clientOptions);
     };
 
-    vacancyDetailsSummary = (vacanciesIn: VacanciesIn) => {
-        let vacanciesJSON = JSON.stringify(vacanciesIn);
+    vacancyDetailsSummary = (vacancyDetailsSummaryIn: VacancyDetailsSummaryIn) => {
+        const vacancyDetailsSummaryInJSON = JSON.parse(vacancyDetailsSummaryIn.toJsonString());
+
         const clientOptions = {
-            url: "/rest/platform/hcm/recruitment/queries/vacancyDetailsSummary",
+            url: "/rest/hcm/recruitment/queries/vacancyDetailsSummary",
             method: HttpMethod.POST,
-            data: {
-                vacanciesJSON
-            },
+            data:
+                vacancyDetailsSummaryInJSON
+            ,
+            headers: {
+                authorization: this.seniorApi.accessToken
+            }
+        };
+
+        return this.request(clientOptions);
+    };
+
+    searchPersons = (searchPersonsIn: SearchPersonsIn) => {
+        const searchPersonsInJSON = JSON.parse(searchPersonsIn.toJsonString());
+        const clientOptions = {
+            url: "/rest/hcm/recruitment/queries/searchPersons",
+            method: HttpMethod.POST,
+            data:
+                searchPersonsInJSON
+            ,
             headers: {
                 authorization: this.seniorApi.accessToken
             }
@@ -59,48 +74,4 @@ export default class Recruitment extends RequestClient {
         return this.request(clientOptions);
     };
 
-    searchPersons = (vacanciesIn: VacanciesIn) => {
-        let vacanciesJSON = JSON.stringify(vacanciesIn);
-        const clientOptions = {
-            url: "/rest/platform/hcm/recruitment/queries/searchPersons",
-            method: HttpMethod.POST,
-            data: {
-                vacanciesJSON
-            },
-            headers: {
-                authorization: this.seniorApi.accessToken
-            }
-        };
-        return this.request(clientOptions);
-    };
-
-    dependentQuery = (vacanciesIn: VacanciesIn) => {
-        let vacanciesJSON = JSON.stringify(vacanciesIn);
-        const clientOptions = {
-            url: "/rest/platform/hcm/dependent/queries/dependentQuery",
-            method: HttpMethod.POST,
-            data: {
-                vacanciesJSON
-            },
-            headers: {
-                authorization: this.seniorApi.accessToken
-            }
-        };
-        return this.request(clientOptions);
-    };
-
-    dependentListQuery = (vacanciesIn: VacanciesIn) => {
-        let vacanciesJSON = JSON.stringify(vacanciesIn);
-        const clientOptions = {
-            url: "/rest/platform/hcm/dependent/queries/dependentQuery",
-            method: HttpMethod.POST,
-            data: {
-                vacanciesJSON
-            },
-            headers: {
-                authorization: this.seniorApi.accessToken
-            }
-        };
-        return this.request(clientOptions);
-    };
 }

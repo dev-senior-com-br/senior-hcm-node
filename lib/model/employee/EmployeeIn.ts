@@ -1,4 +1,6 @@
-export default class EmployeeIn {
+import { BaseModel } from "../BaseModel";
+
+export default class EmployeeIn extends BaseModel {
 
     /**
      * Id do colaborador
@@ -16,9 +18,9 @@ export default class EmployeeIn {
     /**
      * Data de referencia
      */
-    private _referenceDate: Date;
+    private _referenceDate: string;
 
-    public set referenceDate(value: Date) {
+    public set referenceDate(value: string) {
         this._referenceDate = value;
     }
 

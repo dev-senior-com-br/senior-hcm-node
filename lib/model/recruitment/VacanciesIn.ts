@@ -1,4 +1,6 @@
-export default class VacanciesIn {
+import { BaseModel } from "../BaseModel";
+
+export default class VacanciesIn extends BaseModel {
 
     /**
      * Motivo da abertura da vaga
@@ -29,9 +31,9 @@ export default class VacanciesIn {
     /**
      * Situação a ser filtrada.
      */
-    private _situation: string;
+    private _situation: string[];
 
-    public set situation(value: string) {
+    public set situation(value: string[]) {
         this._situation = value;
     }
 

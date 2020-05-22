@@ -1,4 +1,6 @@
-export default class VacancyDetailsIn {
+import { BaseModel } from "../BaseModel";
+
+export default class VacancyDetailsIn extends BaseModel {
 
     /**
      * Identificador único da vaga.
@@ -30,7 +32,7 @@ export default class VacancyDetailsIn {
      * Indica que a primitiva foi chamada pelo recrutamento legado (base HCM), default é true.
      */
 
-    private _fromRecruitment: boolean = true;
+    private _fromRecruitment: boolean;
 
     public set fromRecruitment(value: boolean) {
         this._fromRecruitment = value;

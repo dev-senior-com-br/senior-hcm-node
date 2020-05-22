@@ -1,6 +1,7 @@
 import Pagination from "../Pagination";
+import { BaseModel } from "../BaseModel";
 
-export default class DependentListIn {
+export default class DependentListIn extends BaseModel {
 
     /**
      * Id do colaborador

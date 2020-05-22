@@ -1,4 +1,6 @@
-export default class SearchPersonsIn {
+import { BaseModel } from "../BaseModel";
+
+export default class SearchPersonsIn extends BaseModel {
     /**
      * Expressão a ser encontrada, a busca é efetuada no nome completo do colaborador.
      */
@@ -15,9 +17,9 @@ export default class SearchPersonsIn {
     /**
      * Data de referência da pesquisa.
      */
-    private _referenceDate: Date;
+    private _referenceDate: string;
 
-    public set referenceDate(value: Date) {
+    public set referenceDate(value: string) {
         this._referenceDate = value;
     }
 

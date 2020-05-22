@@ -1,6 +1,7 @@
 import { DirectionType } from "../enum/DirectionType";
+import { BaseModel } from "./BaseModel";
 
-export default class Ordination {
+export default class Ordination extends BaseModel {
 
     /**
      * Campo que será ordenado
