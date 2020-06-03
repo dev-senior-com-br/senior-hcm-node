@@ -9,7 +9,6 @@ var DependentIn = require('../built/index').DependentIn;
 var DependentListIn = require('../built/index').DependentListIn;
 var Pagination = require('../built/index').Pagination;
 
-var username = process.env.SENIOR_USERNAME;
 
 var hcmApi = new HCMApi();
 var dependentIn = new DependentIn();
