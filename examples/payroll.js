@@ -3,7 +3,6 @@ require('dotenv').config({
 });
 
 var username = process.env.SENIOR_USERNAME;
-var password = process.env.PASS;
 var HCMApi = require('../built/index').HCMApi;
 var EmployeeIn = require('../built/index').EmployeeIn;
 
