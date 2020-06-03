@@ -2,7 +2,6 @@ require('dotenv').config({
 	path: "../.env"
 });
 
-var username = process.env.SENIOR_USERNAME;
 var password = process.env.PASS;
 var HCMApi = require('../built/index').HCMApi;
 var VacanciesIn = require('../built/index').VacanciesIn;
