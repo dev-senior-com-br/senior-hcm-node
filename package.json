@@ -5,8 +5,13 @@
   "main": "index.js",
   "author": "Senior ECOAPI Team",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "prebuild": "del-cli --force ./dist",
     "build": "tsc",
+    "postbuild": "cpx **/*.ts ./dist && del-cli --force ./dist/node_modules && del-cli --force ./dist/examples",
     "format": "prettier --write \"lib/**/*.ts\" \"lib/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
@@ -44,7 +49,10 @@
     "minimist": ">=1.2.2",
     "prettier": "^1.19.1",
     "tslint": "^6.1.0",
+    "cpx": "^1.5.0",
+    "del-cli": "^3.0.1",
+    "prebuild": "^10.0.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.5"
   }
 }
