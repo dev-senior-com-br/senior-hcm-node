@@ -6,7 +6,14 @@ import SearchPersonsIn from "./lib/model/recruitment/SearchPersonsIn";
 import DependentIn from "./lib/model/dependent/DependentIn";
 import DependentListIn from "./lib/model/dependent/DependentListIn";
 import EmployeeIn from "./lib/model/employee/EmployeeIn";
-import Pagination from "./lib/model/Pagination";
-import Ordination from "./lib/model/Ordination";
 
-export { HCMApi, VacanciesIn, VacancyDetailsIn, VacancyDetailsSummaryIn, SearchPersonsIn, DependentIn, DependentListIn, EmployeeIn, Pagination, Ordination }
+export {
+  HCMApi,
+  VacanciesIn,
+  VacancyDetailsIn,
+  VacancyDetailsSummaryIn,
+  SearchPersonsIn,
+  DependentIn,
+  DependentListIn,
+  EmployeeIn,
+};

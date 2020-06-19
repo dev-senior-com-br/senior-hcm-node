@@ -2,11 +2,11 @@ require('dotenv').config({
 	path: "../.env"
 });
 
-var HCMApi = require('../built/index').HCMApi;
-var VacanciesIn = require('../built/index').VacanciesIn;
-var VacancyDetailsIn = require('../built/index').VacancyDetailsIn;
-var VacancyDetailsSummaryIn = require('../built/index').VacancyDetailsSummaryIn;
-var SearchPersonsIn = require('../built/index').SearchPersonsIn;
+var HCMApi = require('../dist/index').HCMApi;
+var VacanciesIn = require('../dist/index').VacanciesIn;
+var VacancyDetailsIn = require('../dist/index').VacancyDetailsIn;
+var VacancyDetailsSummaryIn = require('../dist/index').VacancyDetailsSummaryIn;
+var SearchPersonsIn = require('../dist/index').SearchPersonsIn;
 
 var username = process.env.SENIOR_USERNAME;
 var password = process.env.PASS;
