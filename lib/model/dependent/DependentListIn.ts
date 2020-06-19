@@ -1,5 +1,5 @@
-import Pagination from "../Pagination";
 import { BaseModel } from "../BaseModel";
+import { Pagination } from "@seniorsistemas/senior-core/dist/lib/model/Pagination";
 
 export default class DependentListIn extends BaseModel {
 

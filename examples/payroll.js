@@ -2,8 +2,8 @@ require('dotenv').config({
     path: "../.env"
 });
 
-var HCMApi = require('../built/index').HCMApi;
-var EmployeeIn = require('../built/index').EmployeeIn;
+var HCMApi = require('../dist/index').HCMApi;
+var EmployeeIn = require('../dist/index').EmployeeIn;
 
 var username = process.env.SENIOR_USERNAME;
 var password = process.env.PASS;

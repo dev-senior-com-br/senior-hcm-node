@@ -4,11 +4,10 @@ require('dotenv').config({
 
 var username = process.env.SENIOR_USERNAME;
 var password = process.env.PASS;
-var HCMApi = require('../built/index').HCMApi;
-var DependentIn = require('../built/index').DependentIn;
-var DependentListIn = require('../built/index').DependentListIn;
-var Pagination = require('../built/index').Pagination;
-
+var HCMApi = require('../dist/index').HCMApi;
+var DependentIn = require('../dist/index').DependentIn;
+var DependentListIn = require('../dist/index').DependentListIn;
+var Pagination = require('@seniorsistemas/senior-core/dist/lib/model/Pagination').Pagination;
 
 var hcmApi = new HCMApi();
 var dependentIn = new DependentIn();
