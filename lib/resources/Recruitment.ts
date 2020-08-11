@@ -1,8 +1,9 @@
 import VacanciesIn from '../model/recruitment/VacanciesIn';
 import HCMApi from '../HCMApi';
 import VacancyDetailsIn from '../model/recruitment/VacancyDetailsIn';
-import { VacancyDetailsSummaryIn, SearchPersonsIn } from '../..';
 import { SeniorApi, RequestClient, HttpMethod, RequestReturn } from '@seniorsistemas/senior-core';
+import VacancyDetailsSummaryIn from 'lib/model/recruitment/VacancyDetailsSummaryIn';
+import SearchPersonsIn from 'lib/model/recruitment/SearchPersonsIn';
 
 export default class Recruitment extends RequestClient {
   #seniorApi: SeniorApi;

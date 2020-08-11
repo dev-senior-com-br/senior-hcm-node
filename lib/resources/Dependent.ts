@@ -1,8 +1,7 @@
 import HCMApi from '../HCMApi';
 import DependentIn from '../model/dependent/DependentIn';
 import DependentListIn from '../model/dependent/DependentListIn';
-import { RequestClient, SeniorApi } from '@seniorsistemas/senior-core';
-import { HttpMethod, RequestReturn } from '@seniorsistemas/senior-core/dist/lib/model';
+import { RequestClient, SeniorApi, HttpMethod, RequestReturn } from '@seniorsistemas/senior-core';
 
 export default class Dependent extends RequestClient {
   #seniorApi: SeniorApi;

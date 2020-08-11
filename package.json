@@ -36,7 +36,7 @@
     "api"
   ],
   "dependencies": {
-    "@seniorsistemas/senior-core": "^1.2.32-SNAPSHOT-3"
+    "@seniorsistemas/senior-core": "^1.2.32-SNAPSHOT-4"
   },
   "homepage": "https://github.com/dev-senior-com-br/senior-hcm-node#readme",
   "directories": {
