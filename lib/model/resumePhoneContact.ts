@@ -1,5 +1,5 @@
 /**
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -9,6 +9,7 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { PersonPhoneContactPhoneContact } from './personPhoneContactPhoneContact';
 
 
 /**
@@ -23,10 +24,7 @@ export interface ResumePhoneContact {
      * Identificador único do currículo.
      */
     resumeId: string;
-    /**
-     * Identificador único do telefone de contato.
-     */
-    phoneContact: any;
+    phoneContact: PersonPhoneContactPhoneContact;
     /**
      * ID do registro no sistema legado. Esse atributo não é persistido na base, é utilizado apenas como identificador na integração do registro da g5 para G7.
      */
