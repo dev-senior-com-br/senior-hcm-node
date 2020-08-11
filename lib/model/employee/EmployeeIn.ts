@@ -1,31 +1,31 @@
-import { BaseModel } from "../BaseModel";
+import { BaseModel } from '../BaseModel';
 
 export default class EmployeeIn extends BaseModel {
 
     /**
      * Id do colaborador
      */
-    private _employeeId: string;
+    #employeeId: string;
 
-    public set employeeId(value: string) {
-        this._employeeId = value;
+    set employeeId(value: string) {
+      this.#employeeId = value;
     }
 
-    public get employeeId() {
-        return this._employeeId;
+    get employeeId(): string {
+      return this.#employeeId;
     }
 
     /**
      * Data de referencia
      */
-    private _referenceDate: string;
+    #referenceDate: string;
 
-    public set referenceDate(value: string) {
-        this._referenceDate = value;
+    set referenceDate(value: string) {
+      this.#referenceDate = value;
     }
 
-    public get referenceDate() {
-        return this._referenceDate;
+    get referenceDate(): string {
+      return this.#referenceDate;
     }
 
 }

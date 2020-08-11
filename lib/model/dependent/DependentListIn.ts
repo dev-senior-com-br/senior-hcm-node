@@ -1,32 +1,32 @@
-import { BaseModel } from "../BaseModel";
-import { Pagination } from "@seniorsistemas/senior-core/dist/lib/model/Pagination";
+import { BaseModel } from '../BaseModel';
+import { Pagination } from '@seniorsistemas/senior-core/dist/lib/model/Pagination';
 
 export default class DependentListIn extends BaseModel {
 
     /**
      * Id do colaborador
      */
-    private _employeeId: string;
+    #employeeId: string;
 
-    public set employeeId(value: string) {
-        this._employeeId = value;
+    set employeeId(value: string) {
+      this.#employeeId = value;
     }
 
-    public get employeeId() {
-        return this._employeeId;
+    get employeeId(): string {
+      return this.#employeeId;
     }
 
     /**
      * Paginação da busca
      */
-    private _page: Pagination;
+    #page: Pagination;
 
-    public set page(value: Pagination) {
-        this._page = value;
+    set page(value: Pagination) {
+      this.#page = value;
     }
 
-    public get page() {
-        return this._page;
+    get page(): Pagination {
+      return this.#page;
     }
 
 }

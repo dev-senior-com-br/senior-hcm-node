@@ -9,12 +9,18 @@
     "dist"
   ],
   "scripts": {
+    "prepublishOnly": "npm run build",
     "prebuild": "del-cli --force ./dist",
     "build": "tsc",
-    "postbuild": "cpx **/*.ts ./dist && del-cli --force ./dist/node_modules && del-cli --force ./dist/examples",
     "format": "prettier --write \"lib/**/*.ts\" \"lib/**/*.js\"",
-    "lint": "tslint -p tsconfig.json",
+    "lint": "eslint ./lib",
+    "lint:fix": "npm run lint -- --fix",
     "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "repository": {
     "type": "git",
@@ -30,12 +36,7 @@
     "api"
   ],
   "dependencies": {
-    "bluebird": "3.4.7",
-    "dotenv": "^8.2.0",
-    "lodash": "^4.17.15",
-    "q": "2.0.x",
-    "request": "^2.88.0",
-    "tsc": "^1.20150623.0"
+    "@seniorsistemas/senior-core": "^1.2.32-SNAPSHOT-3"
   },
   "homepage": "https://github.com/dev-senior-com-br/senior-hcm-node#readme",
   "directories": {
@@ -43,17 +44,15 @@
     "lib": "lib"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.149",
-    "@seniorsistemas/senior-core": "^1.2.23",
-    "@types/q": "^1.5.2",
-    "@types/request": "^2.48.4",
-    "minimist": ">=1.2.2",
-    "prettier": "^1.19.1",
-    "tslint": "^6.1.0",
-    "@deboxsoft/cpx": "^1.5.0",
     "del-cli": "^3.0.1",
-    "prebuild": "^10.0.0",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.9.5"
+    "dotenv": "^8.2.0",
+    "@types/node": "^14.0.14",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.9.5",
+    "prettier": "2.0.5",
+    "ts-node": "^8.10.2",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "eslint": "^7.3.1"
   }
 }

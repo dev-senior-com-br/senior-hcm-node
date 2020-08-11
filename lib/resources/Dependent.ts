@@ -1,40 +1,41 @@
-import HCMApi from "../HCMApi";
-import DependentIn from "../model/dependent/DependentIn";
-import DependentListIn from "../model/dependent/DependentListIn";
-import RequestClient from "@seniorsistemas/senior-core/dist/lib/base/RequestClient";
-import { HttpMethod } from "@seniorsistemas/senior-core/dist/lib/model/HttpMethod";
+import HCMApi from '../HCMApi';
+import DependentIn from '../model/dependent/DependentIn';
+import DependentListIn from '../model/dependent/DependentListIn';
+import { RequestClient, SeniorApi } from '@seniorsistemas/senior-core';
+import { HttpMethod, RequestReturn } from '@seniorsistemas/senior-core/dist/lib/model';
 
 export default class Dependent extends RequestClient {
-  private _client: RequestClient;
-  seniorApi: any;
+  #seniorApi: SeniorApi;
 
   constructor(hcmApi: HCMApi) {
-    super(hcmApi, "hcm", "dependent");
+    super(hcmApi, 'hcm', 'dependent');
   }
 
-  dependentQuery = (dependentQueryIn: DependentIn) => {
-    let dependentQueryInJSON = JSON.parse(dependentQueryIn.toJsonString());
+  dependentQuery(dependentQueryIn: DependentIn): Promise<RequestReturn> {
+    const dependentQueryInJSON = JSON.parse(dependentQueryIn.toJsonString());
     const clientOptions = {
-      url: "/rest/hcm/dependent/queries/dependentQuery",
+      url: '/rest/hcm/dependent/queries/dependentQuery',
       method: HttpMethod.POST,
       data: dependentQueryInJSON,
       headers: {
-        authorization: this.seniorApi.accessToken,
+        authorization: this.#seniorApi.accessToken,
       },
     };
     return this.request(clientOptions);
-  };
+  }
 
-  dependentListQuery = (dependentListQuery: DependentListIn) => {
-    let dependentListQueryJSON = JSON.parse(dependentListQuery.toJsonString());
+  dependentListQuery(dependentListQuery: DependentListIn): Promise<RequestReturn> {
+    const dependentListQueryJSON = JSON.parse(
+      dependentListQuery.toJsonString()
+    );
     const clientOptions = {
-      url: "/rest/hcm/dependent/queries/dependentListQuery",
+      url: '/rest/hcm/dependent/queries/dependentListQuery',
       method: HttpMethod.POST,
       data: dependentListQueryJSON,
       headers: {
-        authorization: this.seniorApi.accessToken,
+        authorization: this.#seniorApi.accessToken,
       },
     };
     return this.request(clientOptions);
-  };
+  }
 }

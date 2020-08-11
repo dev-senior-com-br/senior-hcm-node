@@ -1,14 +1,14 @@
-import { BaseModel } from "../BaseModel";
+import { BaseModel } from '../BaseModel';
 
 export default class DependentIn extends BaseModel {
-    private _dependentId: string;
+    #dependentId: string;
 
-    public set dependentId(value: string) {
-        this._dependentId = value;
+    set dependentId(value: string) {
+      this.#dependentId = value;
     }
 
-    public get dependentId() {
-        return this._dependentId;
+    get dependentId(): string {
+      return this.#dependentId;
     }
 
 }
