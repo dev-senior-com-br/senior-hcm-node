@@ -17,6 +17,14 @@ npm i @seniorsistemas/senior-hcm --save-dev
 
 ## Ambiente
 Atualmente o ambiente padrão para o desenvolvimento é o da Homologx.
+Para fazer a troca do ambiente basta chamar o metodo `setEnvironment` ou `setUrl` caso queira passar uma url da plataforma diferente das configuradas:
+
+```javascript
+export enum ENVIRONMENTS {
+  DEV = 'https://platform-homologx.senior.com.br/t/senior.com.br/bridge/1.0',
+  PROD = 'https://api.senior.com.br',
+}
+```
 
 ## Fontes
 ```sh
@@ -53,6 +61,13 @@ Então você precisa criar instância informando usuário e senha.
 var api = new SeniorApi(username, password);
 ```
 
+Mudando o ambiente:
+
+```javascript
+const { ENVIRONMENTS } = require('@seniorsistemas/senior-core');
+api.setEnvironment(ENVIRONMENTS.PROD);
+```
+
 ### Exemplos
 Na pasta [examples](https://github.com/dev-senior-com-br/senior-hcm-node/tree/develop/examples) você encontrar alguns exemplos.
 Para executa-los, entrar na pasta examples, executar a instalação das dependencias:
@@ -81,6 +96,12 @@ var group_description = "<Descrição do grupo>";
 ...
 ```
 
+#### Exemplos implementados
+
+* [Dependent](examples/dependent.js)
+* [Entidade](examples/entidade.ts)
+* [Payroll](examples/payroll.js)
+* [Recruitment](examples/recruitment.js)
 
 ### Links
 * [Documentação da API](https://dev.senior.com.br/api/platform/)
