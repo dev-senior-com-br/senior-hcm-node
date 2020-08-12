@@ -1,5 +1,5 @@
 /**
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -9,16 +9,17 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { RecruitmentProcessEmployee } from './recruitmentProcessEmployee';
+import { RecruitmentProcessHistoryStatus } from './recruitmentProcessHistoryStatus';
+import { RecruitmentProcessResume } from './recruitmentProcessResume';
+import { RecruitmentProcessVacancy } from './recruitmentProcessVacancy';
 
 
 /**
  * Processo seletivo do candidato.
  */
 export interface RecruitmentProcess { 
-    /**
-     * Candidato externo.
-     */
-    resume?: any;
+    resume?: RecruitmentProcessResume;
     /**
      * Data e hora da criação da candidatura.
      */
@@ -39,14 +40,8 @@ export interface RecruitmentProcess {
      * Justificativa para a reprovação/remoção do candidato no processo seletivo em questão (Se for o caso).
      */
     justification?: string;
-    /**
-     * Candidato interno
-     */
-    employee?: any;
-    /**
-     * Vaga.
-     */
-    vacancy?: any;
+    employee?: RecruitmentProcessEmployee;
+    vacancy?: RecruitmentProcessVacancy;
     /**
      * Identificador único da vaga.
      */
@@ -55,8 +50,5 @@ export interface RecruitmentProcess {
      * Data e hora da última alteração na candidatura.
      */
     updatedAt?: Date;
-    /**
-     * Status do candidato na vaga.
-     */
-    status?: any;
+    status?: RecruitmentProcessHistoryStatus;
 }

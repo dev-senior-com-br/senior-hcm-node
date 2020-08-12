@@ -1,5 +1,5 @@
 /**
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -9,6 +9,8 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { AppointmentVacancy } from './appointmentVacancy';
+import { RecruitmentProcessStageStage } from './recruitmentProcessStageStage';
 
 
 /**
@@ -31,10 +33,7 @@ export interface Appointment {
      * Local do compromisso.
      */
     site: string;
-    /**
-     * Etapa do processo seletivo.
-     */
-    stage?: any;
+    stage?: RecruitmentProcessStageStage;
     /**
      * Horário de início do compromisso.
      */
@@ -55,10 +54,7 @@ export interface Appointment {
      * Colaboradores que participarão do compromisso para ajudar a avaliar os candidatos.
      */
     employees?: Array<any>;
-    /**
-     * Vaga do processo seletivo.
-     */
-    vacancy?: any;
+    vacancy?: AppointmentVacancy;
     /**
      * Identificador único da vaga  do processo seletivo.
      */

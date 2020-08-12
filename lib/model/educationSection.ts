@@ -1,5 +1,5 @@
 /**
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -9,6 +9,8 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { EducationSectionDegree } from './educationSectionDegree';
+import { EducationSectionStatus } from './educationSectionStatus';
 
 
 /**
@@ -31,10 +33,7 @@ export interface EducationSection {
      * ID do registro no sistema legado. Esse atributo não é persistido na base, é utilizado apenas como identificador na integração do registro da g5 para G7.
      */
     g5Id?: string;
-    /**
-     * Nível.
-     */
-    degree: any;
+    degree: EducationSectionDegree;
     /**
      * Ano de conclusão.
      */
@@ -47,10 +46,7 @@ export interface EducationSection {
      * Curso.
      */
     fieldOfStudy: string;
-    /**
-     * Situação do curso.
-     */
-    status: any;
+    status: EducationSectionStatus;
     /**
      * Data da última alteração.
      */
