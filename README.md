@@ -18,13 +18,6 @@ npm i @seniorsistemas/senior-hcm --save
 ## Ambiente
 Atualmente o ambiente padrão para o desenvolvimento é o da Homologx.
 
-## Fontes
-```sh
-$ git clone https://github.com/dev-senior-com-br/senior-hcm-node.git
-$ cd senior-hcm-node
-$ npm install
-```
-
 ### Configurações
 Os comando abaixo permitem configuração de proxy:
  - npm config set proxy <ALTERAR_PARA_PROXY_HTTP>
@@ -41,46 +34,34 @@ _Criar arquivo *.env* na raíz do projeto_
 
 ### Iniciando a utilização
 
-Primeiro você precisa criar um arquivo `.js`, como por exemplo: `authentication-example.js`, e nele requerer a biblioteca.
+Primeiro você precisa criar um arquivo `.js`, como por exemplo: `recruitment.js`, e nele requerer a biblioteca.
 
 ```javascript
-var SeniorApi = require('../senior-hcm-node/index').default;
+const HCMApi = require('@seniorsistemas/senior-hcm');
 ```
 
 Então você precisa criar instância informando usuário e senha.
 
 ```javascript
-var api = new SeniorApi(username, password);
+const api = new HCMApi(username, password);
 ```
 
 ### Exemplos
 Na pasta [examples](https://github.com/dev-senior-com-br/senior-hcm-node/tree/develop/examples) você encontrar alguns exemplos.
-Para executa-los, entrar na pasta examples, executar a instalação das dependencias:
+Para executa-los, basta rodar o comando abaixo com o nome do arquivo (substituir a chave <nome_arquivo>).
 ```
-npm install
-```
-
-Alterear os valores das variáveis e executar conforme o comando abaixo:
-```
-node <teste>-example
+node examples/<nome_arquivo>.js
 ``` 
 
-Alguns exemplos necessitam de propriedades específicas, descritas no inicio dos arquivos. Como o `user-example`:
+Alguns exemplos necessitam de propriedades específicas, descritas no inicio dos arquivos. Para configurar basta criar um arquivo no root do projeto chamado `.env` contendo chave=valor para cada variavel de ambiente que o exemplo necessita.
+Exemplo:
+No arquivo `examples/recruitment.js` usamos a variavel de ambiente: `process.env.SENIOR_USERNAME`, sendo assim no arquivo `.env` você vai colocar o seguinte:
 ```
-...
-//Propriedades necessárias:
-var creation_username = "<Username do novo usuário>";
-var creation_fullName = "<Nome completo>";
-var creation_email = "<Email do novo usuário>";
-var creation_password = "<Senha do novo usuário>";
-var creation_locale = "<Locale do usuário (exemplo: pt-BR)>";
-var changed_fullName = "<Nome completo para alteração do usuário>";
-var tenantName = "<Nome do tenant>";
-var group_name =  "<Nome do novo grupo>";
-var group_description = "<Descrição do grupo>";
-...
+SENIOR_USERNAME=<seu_usuario_da_plataforma>
+PASS=<seu_password_da_plataforma>
 ```
 
+Essa configuração é igual ao colocar variáveis de ambiente, o `.env` é só um falicitador para o node.
 
 ### Links
 * [Documentação da API](https://dev.senior.com.br/api/platform/)

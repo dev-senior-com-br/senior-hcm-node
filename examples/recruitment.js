@@ -1,6 +1,4 @@
-require('dotenv').config({
-	path: "../.env"
-});
+require('dotenv').config();
 
 var HCMApi = require('../dist/index').HCMApi;
 var VacanciesIn = require('../dist/index').VacanciesIn;

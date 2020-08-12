@@ -1,6 +1,4 @@
-require('dotenv').config({
-  path: '../.env',
-});
+require('dotenv').config();
 import { HCMApi } from '../dist';
 import { Entity } from '@seniorsistemas/senior-core/dist/lib/base/Entity';
 import { Vacancy } from '../dist/lib/model/vacancy';
