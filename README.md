@@ -12,7 +12,7 @@ A SDK suporta o Node.js na versão 10 ou superior.
  
 ## Instalação
 ```
-npm i @seniorsistemas/senior-hcm --save-dev
+npm i @seniorsistemas/senior-hcm --save
 ```
 
 ## Ambiente
