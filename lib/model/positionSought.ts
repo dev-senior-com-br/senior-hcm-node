@@ -11,47 +11,31 @@
  */
 
 
-export interface ProfessionalExperienceSection { 
+export interface PositionSought { 
+    /**
+     * Descrição da área pretendida.
+     */
+    area?: string;
     /**
      * Data de criação.
      */
     createdAt?: Date;
     /**
-     * Endereço.
-     */
-    address?: string;
-    /**
-     * Identificador do currículo a qual o interesse está associado.
+     * Identificador único do currículo.
      */
     resumeId?: string;
-    /**
-     * Data final.
-     */
-    endDate?: string;
     /**
      * ID do registro no sistema legado. Esse atributo não é persistido na base, é utilizado apenas como identificador na integração do registro da g5 para G7.
      */
     g5Id?: string;
     /**
-     * Descrição.
-     */
-    description?: string;
-    /**
-     * Empresa.
-     */
-    company?: string;
-    /**
      * Identificador único da entidade.
      */
     id?: string;
     /**
-     * Cargo.
+     * Descrição do cargo pretendido.
      */
     position?: string;
-    /**
-     * Data inicial.
-     */
-    startDate?: string;
     /**
      * Data da última alteração.
      */

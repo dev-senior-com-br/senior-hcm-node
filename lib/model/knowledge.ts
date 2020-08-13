@@ -9,49 +9,27 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { ProficiencyDto } from './proficiencyDto';
 
 
-export interface ProfessionalExperienceSection { 
+export interface Knowledge { 
     /**
      * Data de criação.
      */
     createdAt?: Date;
     /**
-     * Endereço.
-     */
-    address?: string;
-    /**
-     * Identificador do currículo a qual o interesse está associado.
+     * Identificador do currículo a qual o conhecimento está associado.
      */
     resumeId?: string;
     /**
-     * Data final.
-     */
-    endDate?: string;
-    /**
-     * ID do registro no sistema legado. Esse atributo não é persistido na base, é utilizado apenas como identificador na integração do registro da g5 para G7.
-     */
-    g5Id?: string;
-    /**
-     * Descrição.
+     * Descrição do conhecimento.
      */
     description?: string;
-    /**
-     * Empresa.
-     */
-    company?: string;
     /**
      * Identificador único da entidade.
      */
     id?: string;
-    /**
-     * Cargo.
-     */
-    position?: string;
-    /**
-     * Data inicial.
-     */
-    startDate?: string;
+    proficiency?: ProficiencyDto;
     /**
      * Data da última alteração.
      */

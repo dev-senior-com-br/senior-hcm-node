@@ -9,29 +9,35 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { PhoneContact } from './phoneContact';
 
 
-export interface ResumePhoneContact { 
+export interface Department { 
     /**
-     * Data de criação.
+     * Data de Expiração.
      */
-    createdAt?: Date;
+    experitionDate?: Date;
     /**
-     * Identificador único do currículo.
+     * Codigo do departamento
      */
-    resumeId?: string;
-    phoneContact?: PhoneContact;
+    code?: string;
     /**
-     * ID do registro no sistema legado. Esse atributo não é persistido na base, é utilizado apenas como identificador na integração do registro da g5 para G7.
+     * Nome.
      */
-    g5Id?: string;
+    name?: string;
     /**
      * Identificador único da entidade.
      */
     id?: string;
     /**
-     * Data da última alteração.
+     * Endereço do departamento
      */
-    updatedAt?: Date;
+    place?: string;
+    /**
+     * Posicao do departamento.
+     */
+    position?: string;
+    /**
+     * Data de Criação.
+     */
+    createDate?: Date;
 }

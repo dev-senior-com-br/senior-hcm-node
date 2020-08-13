@@ -1,5 +1,5 @@
 /**
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -9,32 +9,34 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { Chat } from './chat';
+import { Company } from './company';
+import { ContractTypeDto } from './contractTypeDto';
+import { CostCenter } from './costCenter';
+import { Department } from './department';
+import { EmployeeSummary } from './employeeSummary';
+import { EmploymentContractDto } from './employmentContractDto';
+import { IntegrationStatusDto } from './integrationStatusDto';
+import { JobPosition } from './jobPosition';
+import { PersonalityModelVacancy } from './personalityModelVacancy';
+import { ProcessTypeDto } from './processTypeDto';
+import { SequenceStaffrequisitionVacancy } from './sequenceStaffrequisitionVacancy';
+import { StaffRequisition } from './staffRequisition';
+import { VacancyAdmissionSituationDto } from './vacancyAdmissionSituationDto';
+import { VacancySituationDto } from './vacancySituationDto';
+import { WorkShift } from './workShift';
+import { WorkstationGroup } from './workstationGroup';
 
 
-/**
- * Vaga de emprego.
- */
 export interface Vacancy { 
-    /**
-     * Motivo de abertura da vaga.
-     */
-    reason: any;
+    reason?: ProcessTypeDto;
     /**
      * Comentário de conclusão
      */
     finalizationComment?: string;
-    /**
-     * Representa o posto de trabalho.
-     */
-    workstationGroup?: any;
-    /**
-     * Requisição da vaga.
-     */
-    requisition?: any;
-    /**
-     * Tipo de contrato de trabalho.
-     */
-    contractType?: any;
+    workstationGroup?: WorkstationGroup;
+    requisition?: StaffRequisition;
+    contractType?: ContractTypeDto;
     /**
      * Data inicial da publicação da vaga para candidatos externos.
      */
@@ -47,10 +49,7 @@ export interface Vacancy {
      * Data de criação da vaga.
      */
     createdAt?: Date;
-    /**
-     * Situação da admissão do candidato escolhido para a vaga.
-     */
-    admissionSituation?: any;
+    admissionSituation?: VacancyAdmissionSituationDto;
     /**
      * Identificador único da entidade.
      */
@@ -59,14 +58,8 @@ export interface Vacancy {
      * URL com o link do arquivo que contém o texto da publicação no BlobService.
      */
     locationURI?: string;
-    /**
-     * Solicitante da vaga.
-     */
-    requester?: any;
-    /**
-     * Turno de trabalho
-     */
-    workShift?: any;
+    requester?: EmployeeSummary;
+    workShift?: WorkShift;
     /**
      * Id do anexo de finalização da vaga
      */
@@ -83,10 +76,7 @@ export interface Vacancy {
      * ID do solicitante da vaga.
      */
     requesterId?: string;
-    /**
-     * Centro de custo
-     */
-    costCenter?: any;
+    costCenter?: CostCenter;
     /**
      * Quantidade de horas que a vaga ficou pendente com o solicitante.
      */
@@ -95,10 +85,7 @@ export interface Vacancy {
      * Versão do identificador do arquivo com o texto da publicação no BlobService.
      */
     version?: string;
-    /**
-     * Cargo da vaga.
-     */
-    jobPosition?: any;
+    jobPosition?: JobPosition;
     /**
      * Identificador da empresa
      */
@@ -111,18 +98,9 @@ export interface Vacancy {
      * Identificador do cargo da vaga.
      */
     jobPositionId?: string;
-    /**
-     * Responsável por armazenar uma sequência única da RP na vaga.
-     */
-    sequenceStaffrequisitionVacancy?: any;
-    /**
-     * Colaborador que será substituido (Se for o caso).
-     */
-    replacedEmployee?: any;
-    /**
-     * Status da efetivação.
-     */
-    integrationStatus?: any;
+    sequenceStaffrequisitionVacancy?: SequenceStaffrequisitionVacancy;
+    replacedEmployee?: EmployeeSummary;
+    integrationStatus?: IntegrationStatusDto;
     /**
      * Identificador do turno de trabalho
      */
@@ -135,14 +113,8 @@ export interface Vacancy {
      * Identificador do questionário
      */
     questionnaire?: string;
-    /**
-     * Modelo de personalidade desejado para a vaga.
-     */
-    personalityModel?: any;
-    /**
-     * Tipo de vínculo empregatício da vaga.
-     */
-    employmentContract?: any;
+    personalityModel?: PersonalityModelVacancy;
+    employmentContract?: EmploymentContractDto;
     /**
      * ID do chat da vaga.
      */
@@ -154,11 +126,11 @@ export interface Vacancy {
     /**
      * Descrição da vaga.
      */
-    description: string;
+    description?: string;
     /**
      * Título da vaga.
      */
-    title: string;
+    title?: string;
     /**
      * Id da requisição da vaga.
      */
@@ -183,26 +155,14 @@ export interface Vacancy {
      * Indica se a vaga deve ser publicada para candidatos internos.
      */
     internalPublish?: boolean;
-    /**
-     * Analista de RH responsável pela vaga.
-     */
-    responsible?: any;
-    /**
-     * Empresa
-     */
-    company?: any;
+    responsible?: EmployeeSummary;
+    company?: Company;
     /**
      * Justificativa para a abertura da vaga.
      */
-    justification: string;
-    /**
-     * Departamento
-     */
-    department?: any;
-    /**
-     * Situação atual da vaga.
-     */
-    situation?: any;
+    justification?: string;
+    department?: Department;
+    situation?: VacancySituationDto;
     /**
      * Início da faixa salarial.
      */
@@ -235,10 +195,7 @@ export interface Vacancy {
      * Data e hora de conclusão da vaga
      */
     finalizedAt?: Date;
-    /**
-     * Chat da vaga.
-     */
-    chat?: any;
+    chat?: Chat;
     /**
      * Progresso da vaga.
      */

@@ -11,47 +11,23 @@
  */
 
 
-export interface ProfessionalExperienceSection { 
+export interface PersonalInterestSection { 
     /**
      * Data de criação.
      */
     createdAt?: Date;
     /**
-     * Endereço.
-     */
-    address?: string;
-    /**
      * Identificador do currículo a qual o interesse está associado.
      */
     resumeId?: string;
     /**
-     * Data final.
+     * Interesse.
      */
-    endDate?: string;
-    /**
-     * ID do registro no sistema legado. Esse atributo não é persistido na base, é utilizado apenas como identificador na integração do registro da g5 para G7.
-     */
-    g5Id?: string;
-    /**
-     * Descrição.
-     */
-    description?: string;
-    /**
-     * Empresa.
-     */
-    company?: string;
+    interest?: string;
     /**
      * Identificador único da entidade.
      */
     id?: string;
-    /**
-     * Cargo.
-     */
-    position?: string;
-    /**
-     * Data inicial.
-     */
-    startDate?: string;
     /**
      * Data da última alteração.
      */

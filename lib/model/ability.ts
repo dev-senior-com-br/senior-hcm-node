@@ -11,47 +11,23 @@
  */
 
 
-export interface ProfessionalExperienceSection { 
+export interface Ability { 
     /**
      * Data de criação.
      */
     createdAt?: Date;
     /**
-     * Endereço.
-     */
-    address?: string;
-    /**
-     * Identificador do currículo a qual o interesse está associado.
+     * Identificador do currículo à qual a habilidade está associada.
      */
     resumeId?: string;
     /**
-     * Data final.
-     */
-    endDate?: string;
-    /**
-     * ID do registro no sistema legado. Esse atributo não é persistido na base, é utilizado apenas como identificador na integração do registro da g5 para G7.
-     */
-    g5Id?: string;
-    /**
-     * Descrição.
+     * Descrição da habilidade.
      */
     description?: string;
-    /**
-     * Empresa.
-     */
-    company?: string;
     /**
      * Identificador único da entidade.
      */
     id?: string;
-    /**
-     * Cargo.
-     */
-    position?: string;
-    /**
-     * Data inicial.
-     */
-    startDate?: string;
     /**
      * Data da última alteração.
      */
