@@ -1,5 +1,5 @@
 /**
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -9,36 +9,34 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { BasicCandidateSummary } from './basicCandidateSummary';
+import { EmployeeSummary } from './employeeSummary';
+import { ModelStage } from './modelStage';
+import { Vacancy } from './vacancy';
 
 
-/**
- * Compromisso do processo seletivo.
- */
 export interface Appointment { 
     /**
      * Data do compromisso.
      */
-    date: string;
+    date?: string;
     /**
      * Assunto do compromisso.
      */
-    subject: string;
+    subject?: string;
     /**
      * Candidatos que participarão do compromisso.
      */
-    candidates: Array<any>;
+    candidates?: Array<BasicCandidateSummary>;
     /**
      * Local do compromisso.
      */
-    site: string;
-    /**
-     * Etapa do processo seletivo.
-     */
-    stage?: any;
+    site?: string;
+    stage?: ModelStage;
     /**
      * Horário de início do compromisso.
      */
-    startTime: string;
+    startTime?: string;
     /**
      * Comentário do compromisso.
      */
@@ -50,17 +48,14 @@ export interface Appointment {
     /**
      * Horário de término do compromisso.
      */
-    endTime: string;
+    endTime?: string;
     /**
      * Colaboradores que participarão do compromisso para ajudar a avaliar os candidatos.
      */
-    employees?: Array<any>;
+    employees?: Array<EmployeeSummary>;
+    vacancy?: Vacancy;
     /**
-     * Vaga do processo seletivo.
-     */
-    vacancy?: any;
-    /**
-     * Identificador único da vaga  do processo seletivo.
+     * Identificador único da vaga &#9;do processo seletivo.
      */
     vacancyId?: string;
     /**

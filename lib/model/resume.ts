@@ -1,5 +1,5 @@
 /**
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -9,24 +9,31 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { Ability } from './ability';
+import { DisabilityDto } from './disabilityDto';
+import { EducationSection } from './educationSection';
+import { GenderDto } from './genderDto';
+import { HonorificDto } from './honorificDto';
+import { Knowledge } from './knowledge';
+import { LanguageSection } from './languageSection';
+import { MaritalStatusDto } from './maritalStatusDto';
+import { PersonalInterestSection } from './personalInterestSection';
+import { PersonalityModelCandidate } from './personalityModelCandidate';
+import { PositionSought } from './positionSought';
+import { ProfessionalExperienceSection } from './professionalExperienceSection';
+import { ResumePhoneContact } from './resumePhoneContact';
 
 
-/**
- * Currículo.
- */
 export interface Resume { 
     /**
      * Data de nascimento da pessoa.
      */
-    birthday: string;
+    birthday?: string;
     /**
      * País.
      */
     country?: string;
-    /**
-     * Gênero (Sexo).
-     */
-    gender: any;
+    gender?: GenderDto;
     /**
      * Cidade.
      */
@@ -42,7 +49,7 @@ export interface Resume {
     /**
      * Formação acadêmica.
      */
-    educations?: Array<any>;
+    educations?: Array<EducationSection>;
     /**
      * Perfil do Instagram.
      */
@@ -58,7 +65,7 @@ export interface Resume {
     /**
      * Interesses pessoais.
      */
-    personalInterests?: Array<any>;
+    personalInterests?: Array<PersonalInterestSection>;
     /**
      * Perfil do Google+.
      */
@@ -66,7 +73,7 @@ export interface Resume {
     /**
      * Habilidades.
      */
-    abilities?: Array<any>;
+    abilities?: Array<Ability>;
     /**
      * Número da residência/comércio.
      */
@@ -83,10 +90,7 @@ export interface Resume {
      * Perfil do Twitter.
      */
     twitter?: string;
-    /**
-     * Modelo de personalidade do candidato
-     */
-    personalityModelCandidate?: any;
+    personalityModelCandidate?: PersonalityModelCandidate;
     /**
      * Quantidade de filhos.
      */
@@ -114,15 +118,12 @@ export interface Resume {
     /**
      * Contatos telefônicos.
      */
-    phoneContacts?: Array<any>;
+    phoneContacts?: Array<ResumePhoneContact>;
     /**
      * E-mail.
      */
-    email: string;
-    /**
-     * Honorífico.
-     */
-    honorific?: any;
+    email?: string;
+    honorific?: HonorificDto;
     /**
      * Data da última alteração.
      */
@@ -134,11 +135,11 @@ export interface Resume {
     /**
      * Idiomas.
      */
-    languages?: Array<any>;
+    languages?: Array<LanguageSection>;
     /**
      * Experiências profissionais.
      */
-    professionalExperiences?: Array<any>;
+    professionalExperiences?: Array<ProfessionalExperienceSection>;
     /**
      * Link da foto miniatura
      */
@@ -170,7 +171,7 @@ export interface Resume {
     /**
      * Deficiências da pessoa.
      */
-    disabilities?: Array<any>;
+    disabilities?: Array<DisabilityDto>;
     /**
      * Número de notificação de currículo incompleto enviadas.
      */
@@ -178,11 +179,11 @@ export interface Resume {
     /**
      * Cargos pretendidos.
      */
-    positionsSought?: Array<any>;
+    positionsSought?: Array<PositionSought>;
     /**
      * Nome completo da pessoa.
      */
-    name: string;
+    name?: string;
     /**
      * Bairro/Distrito.
      */
@@ -195,12 +196,9 @@ export interface Resume {
      * Disponível para viagens.
      */
     travel?: boolean;
-    /**
-     * Estado civil.
-     */
-    maritalStatus?: any;
+    maritalStatus?: MaritalStatusDto;
     /**
      * Conhecimentos.
      */
-    knowledges?: Array<any>;
+    knowledges?: Array<Knowledge>;
 }

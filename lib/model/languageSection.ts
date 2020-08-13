@@ -9,49 +9,31 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { LanguageProficiencyDto } from './languageProficiencyDto';
 
 
-export interface ProfessionalExperienceSection { 
+export interface LanguageSection { 
     /**
      * Data de criação.
      */
     createdAt?: Date;
     /**
-     * Endereço.
-     */
-    address?: string;
-    /**
-     * Identificador do currículo a qual o interesse está associado.
+     * Identificador do currículo à qual o idioma está associado.
      */
     resumeId?: string;
-    /**
-     * Data final.
-     */
-    endDate?: string;
     /**
      * ID do registro no sistema legado. Esse atributo não é persistido na base, é utilizado apenas como identificador na integração do registro da g5 para G7.
      */
     g5Id?: string;
     /**
-     * Descrição.
+     * Idioma.
      */
-    description?: string;
-    /**
-     * Empresa.
-     */
-    company?: string;
+    language?: string;
     /**
      * Identificador único da entidade.
      */
     id?: string;
-    /**
-     * Cargo.
-     */
-    position?: string;
-    /**
-     * Data inicial.
-     */
-    startDate?: string;
+    proficiency?: LanguageProficiencyDto;
     /**
      * Data da última alteração.
      */

@@ -1,5 +1,5 @@
 /**
- * recruitment
+ * Recrutamento e Seleção
  * Serviço do Gestão de Recrutamento e Seleção.
  *
  * OpenAPI spec version: develop-SNAPSHOT
@@ -9,32 +9,23 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { AprovationTypeDto } from './aprovationTypeDto';
+import { IntegrationStatusDto } from './integrationStatusDto';
+import { ModelStage } from './modelStage';
+import { Person } from './person';
+import { RecruitmentProcess } from './recruitmentProcess';
+import { SeemMedicalStatusDto } from './seemMedicalStatusDto';
 
 
-/**
- * Etapa do processo seletivo do candidato.
- */
 export interface RecruitmentProcessStage { 
-    /**
-     * Processo a qual está etapa pertence.
-     */
-    process?: any;
-    /**
-     * Etapa do processo seletivo.
-     */
-    stage?: any;
+    process?: RecruitmentProcess;
+    stage?: ModelStage;
     /**
      * Identificador único do processo a qual está etapa pertence.
      */
     processId?: string;
-    /**
-     * Status da ficha médica integrada.
-     */
-    seemMedicalStatus?: any;
-    /**
-     * Status para gerar a ficha médica e ASO.
-     */
-    integrationStatus?: any;
+    seemMedicalStatus?: SeemMedicalStatusDto;
+    integrationStatus?: IntegrationStatusDto;
     /**
      * Data e hora de envio das informações para gerar a ficha médica e ASO.
      */
@@ -51,14 +42,8 @@ export interface RecruitmentProcessStage {
      * Data e hora de recepção da G5 do parecer da ficha médica e ASO.
      */
     integrationG5Date?: Date;
-    /**
-     * Responsável por gerar a ficha médica e ASO.
-     */
-    integrationResponsiblePerson?: any;
-    /**
-     * Status da etapa.
-     */
-    status?: any;
+    integrationResponsiblePerson?: Person;
+    status?: AprovationTypeDto;
     /**
      * Identificador único da etapa do processo seletivo.
      */

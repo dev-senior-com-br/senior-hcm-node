@@ -9,29 +9,35 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { PhoneContact } from './phoneContact';
+import { PersonalityQuiz } from './personalityQuiz';
+import { Vacancy } from './vacancy';
 
 
-export interface ResumePhoneContact { 
+export interface PersonalityModelVacancy { 
     /**
-     * Data de criação.
+     * Escrupulosidade.
      */
-    createdAt?: Date;
+    conscientiousness?: number;
     /**
-     * Identificador único do currículo.
+     * Abertura.
      */
-    resumeId?: string;
-    phoneContact?: PhoneContact;
+    openness?: number;
     /**
-     * ID do registro no sistema legado. Esse atributo não é persistido na base, é utilizado apenas como identificador na integração do registro da g5 para G7.
+     * Alcance emocional.
      */
-    g5Id?: string;
+    neuroticism?: number;
+    /**
+     * Extroversão.
+     */
+    extraversion?: number;
+    personalityQuiz?: PersonalityQuiz;
     /**
      * Identificador único da entidade.
      */
     id?: string;
+    vacancy?: Vacancy;
     /**
-     * Data da última alteração.
+     * Amabilidade.
      */
-    updatedAt?: Date;
+    agreeableness?: number;
 }
