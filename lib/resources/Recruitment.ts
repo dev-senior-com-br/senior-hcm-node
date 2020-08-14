@@ -15,7 +15,7 @@ export default class Recruitment extends RequestClient {
   listVacancies(vacanciesIn: VacanciesIn): Promise<RequestReturn> {
     const vacanciesJSON = JSON.parse(vacanciesIn.toJsonString());
     const clientOptions = {
-      url: '/rest/hcm/recruitment/queries/listVacancies',
+      url: this.getUrlPath('queries/listVacancies'),
       method: HttpMethod.POST,
       data: vacanciesJSON,
       headers: {
@@ -27,7 +27,7 @@ export default class Recruitment extends RequestClient {
   vacancyDetails(vacancyDetailsIn: VacancyDetailsIn): Promise<RequestReturn> {
     const vacancyDetailsInJSON = JSON.parse(vacancyDetailsIn.toJsonString());
     const clientOptions = {
-      url: '/rest/hcm/recruitment/queries/vacancyDetails',
+      url: this.getUrlPath('queries/vacancyDetails'),
       method: HttpMethod.POST,
       data: vacancyDetailsInJSON,
       headers: {
@@ -40,7 +40,7 @@ export default class Recruitment extends RequestClient {
   vacancyDetailsSummary(vacancyDetailsSummaryIn: VacancyDetailsSummaryIn): Promise<RequestReturn> {
     const vacancyDetailsSummaryInJSON = JSON.parse(vacancyDetailsSummaryIn.toJsonString());
     const clientOptions = {
-      url: '/rest/hcm/recruitment/queries/vacancyDetailsSummary',
+      url: this.getUrlPath('queries/vacancyDetailsSummary'),
       method: HttpMethod.POST,
       data: vacancyDetailsSummaryInJSON,
       headers: {
@@ -53,7 +53,7 @@ export default class Recruitment extends RequestClient {
   searchPersons(searchPersonsIn: SearchPersonsIn): Promise<RequestReturn> {
     const searchPersonsInJSON = JSON.parse(searchPersonsIn.toJsonString());
     const clientOptions = {
-      url: '/rest/hcm/recruitment/queries/searchPersons',
+      url: this.getUrlPath('queries/searchPersons'),
       method: HttpMethod.POST,
       data: searchPersonsInJSON,
       headers: {

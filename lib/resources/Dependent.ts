@@ -13,7 +13,7 @@ export default class Dependent extends RequestClient {
   dependentQuery(dependentQueryIn: DependentIn): Promise<RequestReturn> {
     const dependentQueryInJSON = JSON.parse(dependentQueryIn.toJsonString());
     const clientOptions = {
-      url: '/rest/hcm/dependent/queries/dependentQuery',
+      url: this.getUrlPath('queries/dependentQuery'),
       method: HttpMethod.POST,
       data: dependentQueryInJSON,
       headers: {
@@ -28,7 +28,7 @@ export default class Dependent extends RequestClient {
       dependentListQuery.toJsonString()
     );
     const clientOptions = {
-      url: '/rest/hcm/dependent/queries/dependentListQuery',
+      url: this.getUrlPath('queries/dependentListQuery'),
       method: HttpMethod.POST,
       data: dependentListQueryJSON,
       headers: {

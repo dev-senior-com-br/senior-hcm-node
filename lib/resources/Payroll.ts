@@ -12,7 +12,7 @@ export default class Payroll extends RequestClient {
   employeeQuery(employeeIn: EmployeeIn): Promise<RequestReturn> {
     const employeeInJSON = JSON.parse(employeeIn.toJsonString());
     const clientOptions = {
-      url: '/rest/hcm/payroll/queries/employeeQuery',
+      url: this.getUrlPath('queries/employeeQuery'),
       method: HttpMethod.POST,
       data: employeeInJSON,
       headers: {
