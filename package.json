@@ -14,7 +14,7 @@
     "postbuild": "cpx **/*.ts ./dist && del-cli --force ./dist/node_modules && del-cli --force ./dist/examples",
     "format": "prettier --write \"lib/**/*.ts\" \"lib/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.149",
-    "@seniorsistemas/senior-core": "^1.2.23",
+    "@seniorsistemas/senior-core": "^1.2.33",
     "@types/q": "^1.5.2",
     "@types/request": "^2.48.4",
     "minimist": ">=1.2.2",
