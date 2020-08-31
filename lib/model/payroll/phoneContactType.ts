@@ -14,10 +14,10 @@
 export type PhoneContactType = 'Personal' | 'Professional' | 'Mobile' | 'BusinessFax' | 'PersonalFax' | 'Other';
 
 export const PhoneContactType = {
-    Personal: 'Personal' as PhoneContactType,
-    Professional: 'Professional' as PhoneContactType,
-    Mobile: 'Mobile' as PhoneContactType,
-    BusinessFax: 'BusinessFax' as PhoneContactType,
-    PersonalFax: 'PersonalFax' as PhoneContactType,
-    Other: 'Other' as PhoneContactType
+  Personal: 'Personal' as PhoneContactType,
+  Professional: 'Professional' as PhoneContactType,
+  Mobile: 'Mobile' as PhoneContactType,
+  BusinessFax: 'BusinessFax' as PhoneContactType,
+  PersonalFax: 'PersonalFax' as PhoneContactType,
+  Other: 'Other' as PhoneContactType
 };

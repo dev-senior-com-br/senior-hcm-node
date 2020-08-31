@@ -14,7 +14,7 @@
 export type DecisionPcD = 'No' | 'Also' | 'Only';
 
 export const DecisionPcD = {
-    No: 'No' as DecisionPcD,
-    Also: 'Also' as DecisionPcD,
-    Only: 'Only' as DecisionPcD
+  No: 'No' as DecisionPcD,
+  Also: 'Also' as DecisionPcD,
+  Only: 'Only' as DecisionPcD
 };

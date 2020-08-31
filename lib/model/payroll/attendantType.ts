@@ -14,6 +14,6 @@
 export type AttendantType = 'INTERNAL' | 'EXTERNAL';
 
 export const AttendantType = {
-    INTERNAL: 'INTERNAL' as AttendantType,
-    EXTERNAL: 'EXTERNAL' as AttendantType
+  INTERNAL: 'INTERNAL' as AttendantType,
+  EXTERNAL: 'EXTERNAL' as AttendantType
 };

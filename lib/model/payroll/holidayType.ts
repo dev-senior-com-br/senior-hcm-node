@@ -14,8 +14,8 @@
 export type HolidayType = 'OWN' | 'BRANCH' | 'LOCAL' | 'NONE';
 
 export const HolidayType = {
-    OWN: 'OWN' as HolidayType,
-    BRANCH: 'BRANCH' as HolidayType,
-    LOCAL: 'LOCAL' as HolidayType,
-    NONE: 'NONE' as HolidayType
+  OWN: 'OWN' as HolidayType,
+  BRANCH: 'BRANCH' as HolidayType,
+  LOCAL: 'LOCAL' as HolidayType,
+  NONE: 'NONE' as HolidayType
 };

@@ -14,6 +14,6 @@
 export type StartCountAdditionType = 'HIRE_DATE' | 'NEXT_YEAR_HIRE_DATE';
 
 export const StartCountAdditionType = {
-    HIREDATE: 'HIRE_DATE' as StartCountAdditionType,
-    NEXTYEARHIREDATE: 'NEXT_YEAR_HIRE_DATE' as StartCountAdditionType
+  HIREDATE: 'HIRE_DATE' as StartCountAdditionType,
+  NEXTYEARHIREDATE: 'NEXT_YEAR_HIRE_DATE' as StartCountAdditionType
 };

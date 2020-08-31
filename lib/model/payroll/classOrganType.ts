@@ -14,7 +14,7 @@
 export type ClassOrganType = 'CRM' | 'RMS' | 'CRO';
 
 export const ClassOrganType = {
-    CRM: 'CRM' as ClassOrganType,
-    RMS: 'RMS' as ClassOrganType,
-    CRO: 'CRO' as ClassOrganType
+  CRM: 'CRM' as ClassOrganType,
+  RMS: 'RMS' as ClassOrganType,
+  CRO: 'CRO' as ClassOrganType
 };

@@ -14,6 +14,6 @@
 export type DaysAdditionInCountType = 'CONSIDERED_IN_CALCULATION' | 'NOT_CONSIDERED';
 
 export const DaysAdditionInCountType = {
-    CONSIDEREDINCALCULATION: 'CONSIDERED_IN_CALCULATION' as DaysAdditionInCountType,
-    NOTCONSIDERED: 'NOT_CONSIDERED' as DaysAdditionInCountType
+  CONSIDEREDINCALCULATION: 'CONSIDERED_IN_CALCULATION' as DaysAdditionInCountType,
+  NOTCONSIDERED: 'NOT_CONSIDERED' as DaysAdditionInCountType
 };

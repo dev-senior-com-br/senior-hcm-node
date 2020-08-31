@@ -14,8 +14,8 @@
 export type AccountType = 'CurrentAccount' | 'SavingsAccount' | 'SalaryAccount' | 'Others';
 
 export const AccountType = {
-    CurrentAccount: 'CurrentAccount' as AccountType,
-    SavingsAccount: 'SavingsAccount' as AccountType,
-    SalaryAccount: 'SalaryAccount' as AccountType,
-    Others: 'Others' as AccountType
+  CurrentAccount: 'CurrentAccount' as AccountType,
+  SavingsAccount: 'SavingsAccount' as AccountType,
+  SalaryAccount: 'SalaryAccount' as AccountType,
+  Others: 'Others' as AccountType
 };

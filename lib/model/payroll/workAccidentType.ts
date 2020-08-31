@@ -14,7 +14,7 @@
 export type WorkAccidentType = 'TRAMPLING' | 'COLLISION' | 'OTHERS';
 
 export const WorkAccidentType = {
-    TRAMPLING: 'TRAMPLING' as WorkAccidentType,
-    COLLISION: 'COLLISION' as WorkAccidentType,
-    OTHERS: 'OTHERS' as WorkAccidentType
+  TRAMPLING: 'TRAMPLING' as WorkAccidentType,
+  COLLISION: 'COLLISION' as WorkAccidentType,
+  OTHERS: 'OTHERS' as WorkAccidentType
 };

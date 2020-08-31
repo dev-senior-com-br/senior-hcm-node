@@ -14,6 +14,6 @@
 export type ProfessionalCouncilSituationType = 'DEFINITIVE' | 'TEMPORARY';
 
 export const ProfessionalCouncilSituationType = {
-    DEFINITIVE: 'DEFINITIVE' as ProfessionalCouncilSituationType,
-    TEMPORARY: 'TEMPORARY' as ProfessionalCouncilSituationType
+  DEFINITIVE: 'DEFINITIVE' as ProfessionalCouncilSituationType,
+  TEMPORARY: 'TEMPORARY' as ProfessionalCouncilSituationType
 };

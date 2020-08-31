@@ -14,6 +14,6 @@
 export type FormAdditionCountType = 'FULL_YEAR' | 'FACTORIAL_SIX_MONTHS';
 
 export const FormAdditionCountType = {
-    FULLYEAR: 'FULL_YEAR' as FormAdditionCountType,
-    FACTORIALSIXMONTHS: 'FACTORIAL_SIX_MONTHS' as FormAdditionCountType
+  FULLYEAR: 'FULL_YEAR' as FormAdditionCountType,
+  FACTORIALSIXMONTHS: 'FACTORIAL_SIX_MONTHS' as FormAdditionCountType
 };

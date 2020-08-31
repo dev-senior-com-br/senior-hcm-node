@@ -14,6 +14,6 @@
 export type JobActingType = 'HOLDER' | 'SUBSTITUTE';
 
 export const JobActingType = {
-    HOLDER: 'HOLDER' as JobActingType,
-    SUBSTITUTE: 'SUBSTITUTE' as JobActingType
+  HOLDER: 'HOLDER' as JobActingType,
+  SUBSTITUTE: 'SUBSTITUTE' as JobActingType
 };

@@ -14,10 +14,10 @@
 export type RacialType = 'NotInformed' | 'White' | 'Black' | 'Brown' | 'Yellow' | 'Indian';
 
 export const RacialType = {
-    NotInformed: 'NotInformed' as RacialType,
-    White: 'White' as RacialType,
-    Black: 'Black' as RacialType,
-    Brown: 'Brown' as RacialType,
-    Yellow: 'Yellow' as RacialType,
-    Indian: 'Indian' as RacialType
+  NotInformed: 'NotInformed' as RacialType,
+  White: 'White' as RacialType,
+  Black: 'Black' as RacialType,
+  Brown: 'Brown' as RacialType,
+  Yellow: 'Yellow' as RacialType,
+  Indian: 'Indian' as RacialType
 };

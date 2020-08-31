@@ -14,10 +14,10 @@
 export type WorkshiftScale = 'FIRST_SHIFT' | 'SECOND_SHIFT' | 'THIRD_SHIFT' | 'FOURTH_SHIFT' | 'MIXED' | 'GENERAL';
 
 export const WorkshiftScale = {
-    FIRSTSHIFT: 'FIRST_SHIFT' as WorkshiftScale,
-    SECONDSHIFT: 'SECOND_SHIFT' as WorkshiftScale,
-    THIRDSHIFT: 'THIRD_SHIFT' as WorkshiftScale,
-    FOURTHSHIFT: 'FOURTH_SHIFT' as WorkshiftScale,
-    MIXED: 'MIXED' as WorkshiftScale,
-    GENERAL: 'GENERAL' as WorkshiftScale
+  FIRSTSHIFT: 'FIRST_SHIFT' as WorkshiftScale,
+  SECONDSHIFT: 'SECOND_SHIFT' as WorkshiftScale,
+  THIRDSHIFT: 'THIRD_SHIFT' as WorkshiftScale,
+  FOURTHSHIFT: 'FOURTH_SHIFT' as WorkshiftScale,
+  MIXED: 'MIXED' as WorkshiftScale,
+  GENERAL: 'GENERAL' as WorkshiftScale
 };

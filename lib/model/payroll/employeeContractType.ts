@@ -14,17 +14,17 @@
 export type EmployeeContractType = 'Employee' | 'Manager' | 'FarmWorker' | 'Retired' | 'Trainee' | 'Apprentice' | 'FixedDueDate' | 'RetiredManager' | 'PublicAgent' | 'Teacher' | 'CooperativeWorker' | 'DomesticWorker' | 'TeacherFixedDueDate';
 
 export const EmployeeContractType = {
-    Employee: 'Employee' as EmployeeContractType,
-    Manager: 'Manager' as EmployeeContractType,
-    FarmWorker: 'FarmWorker' as EmployeeContractType,
-    Retired: 'Retired' as EmployeeContractType,
-    Trainee: 'Trainee' as EmployeeContractType,
-    Apprentice: 'Apprentice' as EmployeeContractType,
-    FixedDueDate: 'FixedDueDate' as EmployeeContractType,
-    RetiredManager: 'RetiredManager' as EmployeeContractType,
-    PublicAgent: 'PublicAgent' as EmployeeContractType,
-    Teacher: 'Teacher' as EmployeeContractType,
-    CooperativeWorker: 'CooperativeWorker' as EmployeeContractType,
-    DomesticWorker: 'DomesticWorker' as EmployeeContractType,
-    TeacherFixedDueDate: 'TeacherFixedDueDate' as EmployeeContractType
+  Employee: 'Employee' as EmployeeContractType,
+  Manager: 'Manager' as EmployeeContractType,
+  FarmWorker: 'FarmWorker' as EmployeeContractType,
+  Retired: 'Retired' as EmployeeContractType,
+  Trainee: 'Trainee' as EmployeeContractType,
+  Apprentice: 'Apprentice' as EmployeeContractType,
+  FixedDueDate: 'FixedDueDate' as EmployeeContractType,
+  RetiredManager: 'RetiredManager' as EmployeeContractType,
+  PublicAgent: 'PublicAgent' as EmployeeContractType,
+  Teacher: 'Teacher' as EmployeeContractType,
+  CooperativeWorker: 'CooperativeWorker' as EmployeeContractType,
+  DomesticWorker: 'DomesticWorker' as EmployeeContractType,
+  TeacherFixedDueDate: 'TeacherFixedDueDate' as EmployeeContractType
 };

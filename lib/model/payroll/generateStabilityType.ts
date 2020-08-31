@@ -14,8 +14,8 @@
 export type GenerateStabilityType = 'NO' | 'INITIAL_LEAVE' | 'FINAL_LEAVE' | 'LEAVE_DAYS';
 
 export const GenerateStabilityType = {
-    NO: 'NO' as GenerateStabilityType,
-    INITIALLEAVE: 'INITIAL_LEAVE' as GenerateStabilityType,
-    FINALLEAVE: 'FINAL_LEAVE' as GenerateStabilityType,
-    LEAVEDAYS: 'LEAVE_DAYS' as GenerateStabilityType
+  NO: 'NO' as GenerateStabilityType,
+  INITIALLEAVE: 'INITIAL_LEAVE' as GenerateStabilityType,
+  FINALLEAVE: 'FINAL_LEAVE' as GenerateStabilityType,
+  LEAVEDAYS: 'LEAVE_DAYS' as GenerateStabilityType
 };

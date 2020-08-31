@@ -14,7 +14,7 @@
 export type FormDisregardWithdrawalDayType = 'NOT_CONSIDERED' | 'YEAR_CALCULATION' | 'TOTAL_OF_DAYS_CALCULATION';
 
 export const FormDisregardWithdrawalDayType = {
-    NOTCONSIDERED: 'NOT_CONSIDERED' as FormDisregardWithdrawalDayType,
-    YEARCALCULATION: 'YEAR_CALCULATION' as FormDisregardWithdrawalDayType,
-    TOTALOFDAYSCALCULATION: 'TOTAL_OF_DAYS_CALCULATION' as FormDisregardWithdrawalDayType
+  NOTCONSIDERED: 'NOT_CONSIDERED' as FormDisregardWithdrawalDayType,
+  YEARCALCULATION: 'YEAR_CALCULATION' as FormDisregardWithdrawalDayType,
+  TOTALOFDAYSCALCULATION: 'TOTAL_OF_DAYS_CALCULATION' as FormDisregardWithdrawalDayType
 };

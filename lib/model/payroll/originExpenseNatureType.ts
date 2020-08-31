@@ -14,7 +14,7 @@
 export type OriginExpenseNatureType = 'TYPED' | 'GENERATED_BY_JOB_POSITION' | 'GENERATED_BY_WORKSTATION';
 
 export const OriginExpenseNatureType = {
-    TYPED: 'TYPED' as OriginExpenseNatureType,
-    GENERATEDBYJOBPOSITION: 'GENERATED_BY_JOB_POSITION' as OriginExpenseNatureType,
-    GENERATEDBYWORKSTATION: 'GENERATED_BY_WORKSTATION' as OriginExpenseNatureType
+  TYPED: 'TYPED' as OriginExpenseNatureType,
+  GENERATEDBYJOBPOSITION: 'GENERATED_BY_JOB_POSITION' as OriginExpenseNatureType,
+  GENERATEDBYWORKSTATION: 'GENERATED_BY_WORKSTATION' as OriginExpenseNatureType
 };

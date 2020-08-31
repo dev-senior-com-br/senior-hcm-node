@@ -14,8 +14,8 @@
 export type MovimentationReasonType = 'HIRE' | 'MERIT' | 'REALLOCATION' | 'PROMOTION';
 
 export const MovimentationReasonType = {
-    HIRE: 'HIRE' as MovimentationReasonType,
-    MERIT: 'MERIT' as MovimentationReasonType,
-    REALLOCATION: 'REALLOCATION' as MovimentationReasonType,
-    PROMOTION: 'PROMOTION' as MovimentationReasonType
+  HIRE: 'HIRE' as MovimentationReasonType,
+  MERIT: 'MERIT' as MovimentationReasonType,
+  REALLOCATION: 'REALLOCATION' as MovimentationReasonType,
+  PROMOTION: 'PROMOTION' as MovimentationReasonType
 };

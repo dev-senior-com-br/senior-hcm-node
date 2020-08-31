@@ -14,12 +14,12 @@
 export type SalaryType = 'Hourly' | 'Daily' | 'Weekly' | 'Fortnightly' | 'Monthly' | 'Takers' | 'Dynamic' | 'ThirdParty';
 
 export const SalaryType = {
-    Hourly: 'Hourly' as SalaryType,
-    Daily: 'Daily' as SalaryType,
-    Weekly: 'Weekly' as SalaryType,
-    Fortnightly: 'Fortnightly' as SalaryType,
-    Monthly: 'Monthly' as SalaryType,
-    Takers: 'Takers' as SalaryType,
-    Dynamic: 'Dynamic' as SalaryType,
-    ThirdParty: 'ThirdParty' as SalaryType
+  Hourly: 'Hourly' as SalaryType,
+  Daily: 'Daily' as SalaryType,
+  Weekly: 'Weekly' as SalaryType,
+  Fortnightly: 'Fortnightly' as SalaryType,
+  Monthly: 'Monthly' as SalaryType,
+  Takers: 'Takers' as SalaryType,
+  Dynamic: 'Dynamic' as SalaryType,
+  ThirdParty: 'ThirdParty' as SalaryType
 };

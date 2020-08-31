@@ -14,6 +14,6 @@
 export type TakersRoutineUseType = 'BY_COMPANY_BRANCH' | 'BY_APPORTIONMENT';
 
 export const TakersRoutineUseType = {
-    COMPANYBRANCH: 'BY_COMPANY_BRANCH' as TakersRoutineUseType,
-    APPORTIONMENT: 'BY_APPORTIONMENT' as TakersRoutineUseType
+  COMPANYBRANCH: 'BY_COMPANY_BRANCH' as TakersRoutineUseType,
+  APPORTIONMENT: 'BY_APPORTIONMENT' as TakersRoutineUseType
 };

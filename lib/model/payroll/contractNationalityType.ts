@@ -14,7 +14,7 @@
 export type ContractNationalityType = 'National' | 'Foreign' | 'Expatriate';
 
 export const ContractNationalityType = {
-    National: 'National' as ContractNationalityType,
-    Foreign: 'Foreign' as ContractNationalityType,
-    Expatriate: 'Expatriate' as ContractNationalityType
+  National: 'National' as ContractNationalityType,
+  Foreign: 'Foreign' as ContractNationalityType,
+  Expatriate: 'Expatriate' as ContractNationalityType
 };

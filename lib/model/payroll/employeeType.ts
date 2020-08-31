@@ -14,8 +14,8 @@
 export type EmployeeType = 'NULL' | 'EMPLOYEE' | 'THIRD' | 'PARTNER';
 
 export const EmployeeType = {
-    NULL: 'NULL' as EmployeeType,
-    EMPLOYEE: 'EMPLOYEE' as EmployeeType,
-    THIRD: 'THIRD' as EmployeeType,
-    PARTNER: 'PARTNER' as EmployeeType
+  NULL: 'NULL' as EmployeeType,
+  EMPLOYEE: 'EMPLOYEE' as EmployeeType,
+  THIRD: 'THIRD' as EmployeeType,
+  PARTNER: 'PARTNER' as EmployeeType
 };

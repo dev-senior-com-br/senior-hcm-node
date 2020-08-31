@@ -14,6 +14,6 @@
 export type PriorNoticeDaysInCountType = 'FORECAST_COUNTING' | 'NOT_FORECAST';
 
 export const PriorNoticeDaysInCountType = {
-    FORECASTCOUNTING: 'FORECAST_COUNTING' as PriorNoticeDaysInCountType,
-    NOTFORECAST: 'NOT_FORECAST' as PriorNoticeDaysInCountType
+  FORECASTCOUNTING: 'FORECAST_COUNTING' as PriorNoticeDaysInCountType,
+  NOTFORECAST: 'NOT_FORECAST' as PriorNoticeDaysInCountType
 };

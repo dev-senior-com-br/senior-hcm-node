@@ -14,6 +14,6 @@
 export type ApportionmentDiscountType = 'TYPE_1' | 'TYPE_2';
 
 export const ApportionmentDiscountType = {
-    _1: 'TYPE_1' as ApportionmentDiscountType,
-    _2: 'TYPE_2' as ApportionmentDiscountType
+  _1: 'TYPE_1' as ApportionmentDiscountType,
+  _2: 'TYPE_2' as ApportionmentDiscountType
 };

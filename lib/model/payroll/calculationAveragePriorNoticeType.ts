@@ -14,6 +14,6 @@
 export type CalculationAveragePriorNoticeType = 'CLT' | 'AGREED';
 
 export const CalculationAveragePriorNoticeType = {
-    CLT: 'CLT' as CalculationAveragePriorNoticeType,
-    AGREED: 'AGREED' as CalculationAveragePriorNoticeType
+  CLT: 'CLT' as CalculationAveragePriorNoticeType,
+  AGREED: 'AGREED' as CalculationAveragePriorNoticeType
 };

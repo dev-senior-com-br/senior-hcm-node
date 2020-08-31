@@ -14,8 +14,8 @@
 export type WorkshiftType = 'Permanent' | 'AutomaticSearch' | 'Defined' | 'AutomaticGeneration';
 
 export const WorkshiftType = {
-    Permanent: 'Permanent' as WorkshiftType,
-    AutomaticSearch: 'AutomaticSearch' as WorkshiftType,
-    Defined: 'Defined' as WorkshiftType,
-    AutomaticGeneration: 'AutomaticGeneration' as WorkshiftType
+  Permanent: 'Permanent' as WorkshiftType,
+  AutomaticSearch: 'AutomaticSearch' as WorkshiftType,
+  Defined: 'Defined' as WorkshiftType,
+  AutomaticGeneration: 'AutomaticGeneration' as WorkshiftType
 };

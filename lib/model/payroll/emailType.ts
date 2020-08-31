@@ -14,6 +14,6 @@
 export type EmailType = 'Personal' | 'Professional';
 
 export const EmailType = {
-    Personal: 'Personal' as EmailType,
-    Professional: 'Professional' as EmailType
+  Personal: 'Personal' as EmailType,
+  Professional: 'Professional' as EmailType
 };

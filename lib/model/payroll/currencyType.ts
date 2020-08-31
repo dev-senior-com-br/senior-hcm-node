@@ -14,7 +14,7 @@
 export type CurrencyType = 'Real' | 'Dolar' | 'Index';
 
 export const CurrencyType = {
-    Real: 'Real' as CurrencyType,
-    Dolar: 'Dolar' as CurrencyType,
-    Index: 'Index' as CurrencyType
+  Real: 'Real' as CurrencyType,
+  Dolar: 'Dolar' as CurrencyType,
+  Index: 'Index' as CurrencyType
 };
