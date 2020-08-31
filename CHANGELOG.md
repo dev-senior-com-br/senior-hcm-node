@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 -   Criação dos POJOs das entidades do `hcm/payroll`
+-   Criação dos POJOs das entidades do `hcm/dependent`
 
 ## [1.1.0] - 2020-08-17
 
