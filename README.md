@@ -12,7 +12,7 @@ A SDK suporta o Node.js na versão 10 ou superior.
  
 ## Instalação
 ```
-npm i @seniorsistemas/senior-hcm --save-dev
+npm i @seniorsistemas/senior-hcm --save
 ```
 
 ## Ambiente
@@ -24,13 +24,6 @@ export enum ENVIRONMENTS {
   DEV = 'https://platform-homologx.senior.com.br/t/senior.com.br/bridge/1.0',
   PROD = 'https://api.senior.com.br',
 }
-```
-
-## Fontes
-```sh
-$ git clone https://github.com/dev-senior-com-br/senior-hcm-node.git
-$ cd senior-hcm-node
-$ npm install
 ```
 
 ### Configurações
@@ -49,16 +42,16 @@ _Criar arquivo *.env* na raíz do projeto_
 
 ### Iniciando a utilização
 
-Primeiro você precisa criar um arquivo `.js`, como por exemplo: `authentication-example.js`, e nele requerer a biblioteca.
+Primeiro você precisa criar um arquivo `.js`, como por exemplo: `recruitment.js`, e nele requerer a biblioteca.
 
 ```javascript
-var SeniorApi = require('../senior-hcm-node/index').default;
+const HCMApi = require('@seniorsistemas/senior-hcm');
 ```
 
 Então você precisa criar instância informando usuário e senha.
 
 ```javascript
-var api = new SeniorApi(username, password);
+const api = new HCMApi(username, password);
 ```
 
 Mudando o ambiente:
@@ -70,31 +63,26 @@ api.setEnvironment(ENVIRONMENTS.PROD);
 
 ### Exemplos
 Na pasta [examples](https://github.com/dev-senior-com-br/senior-hcm-node/tree/develop/examples) você encontrar alguns exemplos.
-Para executa-los, entrar na pasta examples, executar a instalação das dependencias:
+Para executa-los, basta rodar o comando abaixo com o nome do arquivo (substituir a chave <nome_arquivo>).
 ```
-npm install
-```
-
-Alterear os valores das variáveis e executar conforme o comando abaixo:
-```
-node <teste>-example
+node examples/<nome_arquivo>.js
 ``` 
 
-Alguns exemplos necessitam de propriedades específicas, descritas no inicio dos arquivos. Como o `user-example`:
+Para rodar arquivos `.ts` é necessário instalar o pacote `ts-node` globalmente (`npm i -g ts-node`) e executar o exemplo conforme abaixo.
+
 ```
-...
-//Propriedades necessárias:
-var creation_username = "<Username do novo usuário>";
-var creation_fullName = "<Nome completo>";
-var creation_email = "<Email do novo usuário>";
-var creation_password = "<Senha do novo usuário>";
-var creation_locale = "<Locale do usuário (exemplo: pt-BR)>";
-var changed_fullName = "<Nome completo para alteração do usuário>";
-var tenantName = "<Nome do tenant>";
-var group_name =  "<Nome do novo grupo>";
-var group_description = "<Descrição do grupo>";
-...
+ts-node examples/<nome_arquivo>.ts
 ```
+
+Alguns exemplos necessitam de propriedades específicas, descritas no inicio dos arquivos. Para configurar basta criar um arquivo no root do projeto chamado `.env` contendo chave=valor para cada variavel de ambiente que o exemplo necessita.
+Exemplo:
+No arquivo `examples/recruitment.js` usamos a variavel de ambiente: `process.env.SENIOR_USERNAME`, sendo assim no arquivo `.env` você vai colocar o seguinte:
+```
+SENIOR_USERNAME=<seu_usuario_da_plataforma>
+PASS=<seu_password_da_plataforma>
+```
+
+Essa configuração é igual ao colocar variáveis de ambiente, o `.env` é só um falicitador para o node.
 
 #### Exemplos implementados
 
@@ -103,17 +91,76 @@ var group_description = "<Descrição do grupo>";
 * [Payroll](examples/payroll.js)
 * [Recruitment](examples/recruitment.js)
 
+#### Entidades do Recruitment
+
+* Currículo - [resume.ts](lib/model/recruitment/resume.ts)
+* Contato telefônico (Currículo) - [resumePhoneContact.ts](lib/model/recruitment/resumePhoneContact.ts)
+* Educação (Currículo) - [educationSection.ts](lib/model/recruitment/rducationSection.ts)
+* Experiência profissional (Currículo) - [professionalExperienceSection.ts](lib/model/recruitment/professionalExperienceSection.ts)
+* Vaga de emprego - [vacancy.ts](lib/model/recruitment/vacancy.ts)
+* Processo seletivo do candidato - [recruitmentProcess.ts](lib/model/recruitment/recruitmentProcess.ts)
+* Etapa do processo seletivo do candidato - [recruitmentProcessStage.ts](lib/model/recruitment/recruitmentProcessStage.ts)
+* Compromisso do processo seletivo - [appointment.ts](lib/model/recruitment/appointment.ts)
+
+#### Entidades do Payroll
+
+* Histórico de natureza de despesa - [historicalExpenseNature.ts](lib/model/payroll/historicalExpenseNature.ts)
+* Histórico de movimentação de um colaborador - [movimentation.ts](lib/model/payroll/movimentation.ts)
+* Vínculo do telefone de contato com a pessoa - [personphonecontact.ts](lib/model/payroll/personphonecontact.ts)
+* Documentação de uma pessoa - [document.ts](lib/model/payroll/document.ts)
+* Histórico de sindicato - [syndicate.ts](lib/model/payroll/syndicate.ts)
+* Aviso Prévio - [priorNotice.ts](lib/model/payroll/priorNotice.ts)
+* Histórico de posto de trabalho - [historicalJobPosition.ts](lib/model/payroll/historicalJobPosition.ts)
+* Histórico de afastamento - [historicalleave.ts](lib/model/payroll/historicalleave.ts)
+* Histórico de horário - [historicalWorkshift.ts](lib/model/payroll/historicalWorkshift.ts)
+* Tipo de atuação - [actingtype.ts](lib/model/payroll/actingtype.ts)
+* Estrutura do posto de trabalho - [workstationgroupstructure.ts](lib/model/payroll/workstationgroupstructure.ts)
+* Pessoa - [person.ts](lib/model/payroll/Person.ts)
+* Histórico de centro de custo - [historicalCostCenter.ts](lib/model/payroll/historicalCostCenter.ts)
+* Vínculo do colaborador - [historicalEmploymentRelationship.ts](lib/model/payroll/historicalEmploymentRelationship.ts)
+* Histórico de categoria do eSocial - [historicalEsocialCategory.ts](lib/model/payroll/historicalEsocialCategory.ts)
+* Outros contratos - [otherContract.ts](lib/model/payroll/otherContract.ts)
+* Telefone de contato - [phonecontact.ts](lib/model/payroll/phonecontact.ts)
+* Local de trabalho - [department.ts](lib/model/payroll/department.ts)
+* Endereço de email da pessoa - [Email.ts](lib/model/payroll/email.ts)
+* Conta bancária - [account.ts](lib/model/payroll/account.ts)
+
+#### Entidades do Dependent
+
+* Dependente - [dependent.ts](lib/model/dependent/dependent.ts)
+* Tutela - [tutelage.ts](lib/model/dependent/tutelage.ts)
+* Auxílio creche - [childcareAssistance.ts](lib/model/dependent/childcareAssistance.ts)
+* Salário família - [familySalary.ts](lib/model/dependent/familySalary.ts)
+* Documento do salário família - [familySalaryDocument.ts](lib/model/dependent/familySalaryDocument.ts)
+* Dependente do imposto de renda - [dependentIncomeTax.ts](lib/model/dependent/dependentIncomeTax.ts)
+* Dependente do plano saúde - [dependentHealthInsurance.ts](lib/model/dependent/dependentHealthInsurance.ts)
+* Pensão judicial - [judicialPension.ts](lib/model/dependent/judicialPension.ts)
+
 ### Links
 * [Documentação da API](https://dev.senior.com.br/api/platform/)
 
+### Entidades
+
+Para utilizar as entidades é necessário chamar o metódo `getEntity` da api passando por parâmetro o domínio, serviço e a entidade.
+
+```javascript
+const entity: Entity<Vacancy> = api.getEntity("hcm", "recruitment", "vacancy");
+entity.get().then(resp => console.log(resp.body));
+
+// Caso seja necessário utilizar a classe de filtro
+String filter = new FilterBuilder().field("id").equals("60B3957C72C44E00A9739451B07265C3").build();
+// O mesmo terá como retorno o seguinte : ?filter=id eq '60B3957C72C44E00A9739451B07265C3'
+```
 
 ## Obtendo versão de distribuição
 Última versão disponível em [https://www.npmjs.com/package/@seniorsistemas/senior-hcm](https://www.npmjs.com/package/@seniorsistemas/senior-hcm)
+
+## [Guia de contribuição](https://dev.senior.com.br/guia-de-contribuicao/)
 
 ## Suporte
 
 Criar uma issue [https://github.com/dev-senior-com-br/senior-hcm-node/issues](https://github.com/dev-senior-com-br/senior-hcm-node/issues)
 
-### License
+## License
 
 Copyright © 2020.

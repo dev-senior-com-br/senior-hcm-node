@@ -1,13 +1,13 @@
-import { BaseModel } from "../BaseModel";
+import { BaseModel } from '../BaseModel';
 
 export default class VacancyDetailsSummaryIn extends BaseModel {
-    private _vacancyId: string;
+    #vacancyId: string;
 
-    public get vacancyId() {
-        return this._vacancyId;
+    get vacancyId(): string {
+      return this.#vacancyId;
     }
 
-    public set vacancyId(value: string) {
-        this._vacancyId = value;
+    set vacancyId(value: string) {
+      this.#vacancyId = value;
     }
 }
