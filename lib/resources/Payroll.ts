@@ -1,26 +1,24 @@
-import EmployeeIn from "../model/employee/EmployeeIn";
-import RequestClient from "@seniorsistemas/senior-core/dist/lib/base/RequestClient";
-import HCMApi from "../HCMApi";
-import { HttpMethod } from "@seniorsistemas/senior-core/dist/lib/model/HttpMethod";
+import EmployeeIn from '../model/employee/EmployeeIn';
+import { RequestClient, HttpMethod, RequestReturn, SeniorApi } from '@seniorsistemas/senior-core';
+import HCMApi from '../HCMApi';
 
 export default class Payroll extends RequestClient {
-  private _client: RequestClient;
-  seniorApi: any;
+  #seniorApi: SeniorApi;
 
   constructor(hcmApi: HCMApi) {
-    super(hcmApi, "hcm", "payroll");
+    super(hcmApi, 'hcm', 'payroll');
   }
 
-  employeeQuery = (employeeIn: EmployeeIn) => {
-    let employeeInJSON = JSON.parse(employeeIn.toJsonString());
+  employeeQuery(employeeIn: EmployeeIn): Promise<RequestReturn> {
+    const employeeInJSON = JSON.parse(employeeIn.toJsonString());
     const clientOptions = {
-      url: "/rest/hcm/payroll/queries/employeeQuery",
+      url: this.getUrlPath('queries/employeeQuery'),
       method: HttpMethod.POST,
       data: employeeInJSON,
       headers: {
-        authorization: this.seniorApi.accessToken,
+        authorization: this.#seniorApi.accessToken,
       },
     };
     return this.request(clientOptions);
-  };
+  }
 }

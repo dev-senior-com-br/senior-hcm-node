@@ -1,6 +1,4 @@
-require('dotenv').config({
-    path: "../.env"
-});
+require('dotenv').config();
 
 var username = process.env.SENIOR_USERNAME;
 var password = process.env.PASS;

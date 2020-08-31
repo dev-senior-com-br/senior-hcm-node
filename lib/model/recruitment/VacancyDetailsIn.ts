@@ -1,44 +1,44 @@
-import { BaseModel } from "../BaseModel";
+import { BaseModel } from '../BaseModel';
 
 export default class VacancyDetailsIn extends BaseModel {
 
     /**
      * Identificador único da vaga.
      */
-    private _id: string;
+    #id: string;
 
-    public set id(value: string) {
-        this._id = value;
+    set id(value: string) {
+      this.#id = value;
     }
 
-    public get id() {
-        return this._id;
+    get id(): string {
+      return this.#id;
     }
 
     /**
      * Id do contrato ativo no analytics
      */
-    private _activeEmployeeId: string;
+    #activeEmployeeId: string;
 
-    public set activeEmployeeId(value: string) {
-        this._activeEmployeeId = value;
+    set activeEmployeeId(value: string) {
+      this.#activeEmployeeId = value;
     }
 
-    public get activeEmployeeId() {
-        return this._activeEmployeeId;
+    get activeEmployeeId(): string {
+      return this.#activeEmployeeId;
     }
 
     /**
      * Indica que a primitiva foi chamada pelo recrutamento legado (base HCM), default é true.
      */
 
-    private _fromRecruitment: boolean;
+    #fromRecruitment: boolean;
 
-    public set fromRecruitment(value: boolean) {
-        this._fromRecruitment = value;
+    set fromRecruitment(value: boolean) {
+      this.#fromRecruitment = value;
     }
 
-    public get fromRecruitment() {
-        return this._fromRecruitment;
+    get fromRecruitment(): boolean {
+      return this.#fromRecruitment;
     }
 }
