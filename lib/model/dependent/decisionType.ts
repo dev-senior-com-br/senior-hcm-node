@@ -14,6 +14,6 @@
 export type DecisionType = 'YES' | 'NO';
 
 export const DecisionType = {
-    YES: 'YES' as DecisionType,
-    NO: 'NO' as DecisionType
+  YES: 'YES' as DecisionType,
+  NO: 'NO' as DecisionType
 };

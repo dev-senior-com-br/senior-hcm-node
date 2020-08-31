@@ -14,10 +14,10 @@
 export type PhoneType = 'PERSONAL' | 'PROFESSIONAL' | 'MOBILE' | 'BUSINESS_FAX' | 'PERSONAL_FAX' | 'OTHER';
 
 export const PhoneType = {
-    PERSONAL: 'PERSONAL' as PhoneType,
-    PROFESSIONAL: 'PROFESSIONAL' as PhoneType,
-    MOBILE: 'MOBILE' as PhoneType,
-    BUSINESSFAX: 'BUSINESS_FAX' as PhoneType,
-    PERSONALFAX: 'PERSONAL_FAX' as PhoneType,
-    OTHER: 'OTHER' as PhoneType
+  PERSONAL: 'PERSONAL' as PhoneType,
+  PROFESSIONAL: 'PROFESSIONAL' as PhoneType,
+  MOBILE: 'MOBILE' as PhoneType,
+  BUSINESSFAX: 'BUSINESS_FAX' as PhoneType,
+  PERSONALFAX: 'PERSONAL_FAX' as PhoneType,
+  OTHER: 'OTHER' as PhoneType
 };

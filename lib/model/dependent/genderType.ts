@@ -14,6 +14,6 @@
 export type GenderType = 'Male' | 'Female';
 
 export const GenderType = {
-    Male: 'Male' as GenderType,
-    Female: 'Female' as GenderType
+  Male: 'Male' as GenderType,
+  Female: 'Female' as GenderType
 };

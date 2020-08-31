@@ -14,6 +14,6 @@
 export type BaseCalculationType = 'FIXED' | 'VARIABLE';
 
 export const BaseCalculationType = {
-    FIXED: 'FIXED' as BaseCalculationType,
-    VARIABLE: 'VARIABLE' as BaseCalculationType
+  FIXED: 'FIXED' as BaseCalculationType,
+  VARIABLE: 'VARIABLE' as BaseCalculationType
 };

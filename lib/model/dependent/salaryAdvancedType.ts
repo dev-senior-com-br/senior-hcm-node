@@ -14,7 +14,7 @@
 export type SalaryAdvancedType = 'YES' | 'NO' | 'PERCENTAGE';
 
 export const SalaryAdvancedType = {
-    YES: 'YES' as SalaryAdvancedType,
-    NO: 'NO' as SalaryAdvancedType,
-    PERCENTAGE: 'PERCENTAGE' as SalaryAdvancedType
+  YES: 'YES' as SalaryAdvancedType,
+  NO: 'NO' as SalaryAdvancedType,
+  PERCENTAGE: 'PERCENTAGE' as SalaryAdvancedType
 };

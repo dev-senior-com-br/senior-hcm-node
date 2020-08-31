@@ -14,7 +14,7 @@
 export type Salary13Type = 'YES' | 'NO' | 'PARTIAL';
 
 export const Salary13Type = {
-    YES: 'YES' as Salary13Type,
-    NO: 'NO' as Salary13Type,
-    PARTIAL: 'PARTIAL' as Salary13Type
+  YES: 'YES' as Salary13Type,
+  NO: 'NO' as Salary13Type,
+  PARTIAL: 'PARTIAL' as Salary13Type
 };

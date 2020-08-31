@@ -14,9 +14,9 @@
 export type MethodPaymentType = 'BANK_CHECK' | 'MONEY' | 'MONEY_ORDER' | 'BANKING_RELATIONSHIP' | 'EXTERNAL';
 
 export const MethodPaymentType = {
-    BANKCHECK: 'BANK_CHECK' as MethodPaymentType,
-    MONEY: 'MONEY' as MethodPaymentType,
-    MONEYORDER: 'MONEY_ORDER' as MethodPaymentType,
-    BANKINGRELATIONSHIP: 'BANKING_RELATIONSHIP' as MethodPaymentType,
-    EXTERNAL: 'EXTERNAL' as MethodPaymentType
+  BANKCHECK: 'BANK_CHECK' as MethodPaymentType,
+  MONEY: 'MONEY' as MethodPaymentType,
+  MONEYORDER: 'MONEY_ORDER' as MethodPaymentType,
+  BANKINGRELATIONSHIP: 'BANKING_RELATIONSHIP' as MethodPaymentType,
+  EXTERNAL: 'EXTERNAL' as MethodPaymentType
 };

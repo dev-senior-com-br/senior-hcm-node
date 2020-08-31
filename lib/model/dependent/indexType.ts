@@ -14,12 +14,12 @@
 export type IndexType = 'OTHER' | 'UFIR' | 'URV' | 'ITRD' | 'SELIC' | 'CONTRIBUTION_SALARY_CORRECTION' | 'SAVINGS_CORRECTION' | 'CURRENCY';
 
 export const IndexType = {
-    OTHER: 'OTHER' as IndexType,
-    UFIR: 'UFIR' as IndexType,
-    URV: 'URV' as IndexType,
-    ITRD: 'ITRD' as IndexType,
-    SELIC: 'SELIC' as IndexType,
-    CONTRIBUTIONSALARYCORRECTION: 'CONTRIBUTION_SALARY_CORRECTION' as IndexType,
-    SAVINGSCORRECTION: 'SAVINGS_CORRECTION' as IndexType,
-    CURRENCY: 'CURRENCY' as IndexType
+  OTHER: 'OTHER' as IndexType,
+  UFIR: 'UFIR' as IndexType,
+  URV: 'URV' as IndexType,
+  ITRD: 'ITRD' as IndexType,
+  SELIC: 'SELIC' as IndexType,
+  CONTRIBUTIONSALARYCORRECTION: 'CONTRIBUTION_SALARY_CORRECTION' as IndexType,
+  SAVINGSCORRECTION: 'SAVINGS_CORRECTION' as IndexType,
+  CURRENCY: 'CURRENCY' as IndexType
 };

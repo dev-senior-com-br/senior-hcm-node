@@ -14,8 +14,8 @@
 export type SubscriptionType = 'CNPJ' | 'CEI' | 'CPF' | 'INCRA';
 
 export const SubscriptionType = {
-    CNPJ: 'CNPJ' as SubscriptionType,
-    CEI: 'CEI' as SubscriptionType,
-    CPF: 'CPF' as SubscriptionType,
-    INCRA: 'INCRA' as SubscriptionType
+  CNPJ: 'CNPJ' as SubscriptionType,
+  CEI: 'CEI' as SubscriptionType,
+  CPF: 'CPF' as SubscriptionType,
+  INCRA: 'INCRA' as SubscriptionType
 };

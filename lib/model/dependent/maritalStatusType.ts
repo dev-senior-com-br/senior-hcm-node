@@ -14,12 +14,12 @@
 export type MaritalStatusType = 'Single' | 'Married' | 'Divorced' | 'Widower' | 'Concubinage' | 'Separated' | 'StableUnion' | 'Others';
 
 export const MaritalStatusType = {
-    Single: 'Single' as MaritalStatusType,
-    Married: 'Married' as MaritalStatusType,
-    Divorced: 'Divorced' as MaritalStatusType,
-    Widower: 'Widower' as MaritalStatusType,
-    Concubinage: 'Concubinage' as MaritalStatusType,
-    Separated: 'Separated' as MaritalStatusType,
-    StableUnion: 'StableUnion' as MaritalStatusType,
-    Others: 'Others' as MaritalStatusType
+  Single: 'Single' as MaritalStatusType,
+  Married: 'Married' as MaritalStatusType,
+  Divorced: 'Divorced' as MaritalStatusType,
+  Widower: 'Widower' as MaritalStatusType,
+  Concubinage: 'Concubinage' as MaritalStatusType,
+  Separated: 'Separated' as MaritalStatusType,
+  StableUnion: 'StableUnion' as MaritalStatusType,
+  Others: 'Others' as MaritalStatusType
 };
