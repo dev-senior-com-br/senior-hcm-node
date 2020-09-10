@@ -11,17 +11,10 @@
  */
 
 
-export interface JobPosition { 
-    /**
-     * Código do cargo.
-     */
-    code?: string;
-    /**
-     * Nome do cargo.
-     */
-    name?: string;
-    /**
-     * Identificador único da entidade.
-     */
-    id?: string;
-}
+export type ResumeGenderDto = 'MALE' | 'FEMALE' | 'LGPD_EXCLUSION';
+
+export const ResumeGenderDto = {
+    MALE: 'MALE' as ResumeGenderDto,
+    FEMALE: 'FEMALE' as ResumeGenderDto,
+    LGPDEXCLUSION: 'LGPD_EXCLUSION' as ResumeGenderDto
+};
