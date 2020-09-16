@@ -11,9 +11,10 @@
  */
 
 
-export type ContractTypeDto = 'DETERMINED_DEADLINE' | 'UNDETERMINED_DEADLINE';
+export type ResumeGenderDto = 'MALE' | 'FEMALE' | 'LGPD_EXCLUSION';
 
-export const ContractTypeDto = {
-    DETERMINEDDEADLINE: 'DETERMINED_DEADLINE' as ContractTypeDto,
-    UNDETERMINEDDEADLINE: 'UNDETERMINED_DEADLINE' as ContractTypeDto
+export const ResumeGenderDto = {
+    MALE: 'MALE' as ResumeGenderDto,
+    FEMALE: 'FEMALE' as ResumeGenderDto,
+    LGPDEXCLUSION: 'LGPD_EXCLUSION' as ResumeGenderDto
 };
