@@ -11,11 +11,9 @@
  */
 
 
-export type SubscriptionType = 'CNPJ' | 'CEI' | 'CPF' | 'INCRA';
+export type ApiType = 'PRIVATE' | 'PUBLIC';
 
-export const SubscriptionType = {
-    CNPJ: 'CNPJ' as SubscriptionType,
-    CEI: 'CEI' as SubscriptionType,
-    CPF: 'CPF' as SubscriptionType,
-    INCRA: 'INCRA' as SubscriptionType
+export const ApiType = {
+    PRIVATE: 'PRIVATE' as ApiType,
+    PUBLIC: 'PUBLIC' as ApiType
 };
