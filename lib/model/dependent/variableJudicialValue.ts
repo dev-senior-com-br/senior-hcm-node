@@ -9,6 +9,7 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { FgtsPensionType } from './fgtsPensionType';
 
 
 export interface VariableJudicialValue { 
@@ -36,6 +37,7 @@ export interface VariableJudicialValue {
      * Id da entidade
      */
     id?: string;
+    fgtsPensionType?: FgtsPensionType;
     /**
      * Percentual de 13o salário da pensão
      */
