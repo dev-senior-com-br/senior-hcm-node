@@ -9,29 +9,27 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { PhoneType } from './phoneType';
 
 
-export interface Phone { 
+export interface Company { 
     /**
-     * Número do telefone
+     * Código da empresa.
      */
-    number?: string;
-    phoneType?: PhoneType;
+    code?: number;
     /**
-     * Ramal do telefone
+     * Relacionamento com a sede da empresa
      */
-    extention?: string;
+    headquarter?: string;
     /**
-     * Código do país (DDI)
+     * Nome da empresa.
      */
-    internationalCode?: string;
+    companyname?: string;
     /**
-     * Código da localidade (DDD)
-     */
-    localCode?: string;
-    /**
-     * Id da entidade
+     * Id da entidade.
      */
     id?: string;
+    /**
+     * Cnpj da empresa.
+     */
+    cnpj?: string;
 }
