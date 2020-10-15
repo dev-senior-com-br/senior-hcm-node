@@ -1,13 +1,11 @@
 import VacanciesIn from '../model/recruitment/VacanciesIn';
 import HCMApi from '../HCMApi';
 import VacancyDetailsIn from '../model/recruitment/VacancyDetailsIn';
-import { SeniorApi, RequestClient, HttpMethod, RequestReturn } from '@seniorsistemas/senior-core';
+import { RequestClient, HttpMethod, RequestReturn } from '@seniorsistemas/senior-core';
 import VacancyDetailsSummaryIn from '../model/recruitment/VacancyDetailsSummaryIn';
 import SearchPersonsIn from '../model/recruitment/SearchPersonsIn';
 
 export default class Recruitment extends RequestClient {
-  #seniorApi: SeniorApi;
-
   constructor(hcmApi: HCMApi) {
     super(hcmApi, 'hcm', 'recruitment');
   }
@@ -19,7 +17,7 @@ export default class Recruitment extends RequestClient {
       method: HttpMethod.POST,
       data: vacanciesJSON,
       headers: {
-        authorization: this.#seniorApi.accessToken,
+        authorization: this.seniorApi.accessToken,
       },
     };
     return this.request(clientOptions);
@@ -31,7 +29,7 @@ export default class Recruitment extends RequestClient {
       method: HttpMethod.POST,
       data: vacancyDetailsInJSON,
       headers: {
-        authorization: this.#seniorApi.accessToken,
+        authorization: this.seniorApi.accessToken,
       },
     };
     return this.request(clientOptions);
@@ -44,7 +42,7 @@ export default class Recruitment extends RequestClient {
       method: HttpMethod.POST,
       data: vacancyDetailsSummaryInJSON,
       headers: {
-        authorization: this.#seniorApi.accessToken,
+        authorization: this.seniorApi.accessToken,
       },
     };
     return this.request(clientOptions);
@@ -57,7 +55,7 @@ export default class Recruitment extends RequestClient {
       method: HttpMethod.POST,
       data: searchPersonsInJSON,
       headers: {
-        authorization: this.#seniorApi.accessToken,
+        authorization: this.seniorApi.accessToken,
       },
     };
     return this.request(clientOptions);

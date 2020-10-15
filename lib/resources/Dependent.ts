@@ -1,11 +1,9 @@
 import HCMApi from '../HCMApi';
 import DependentIn from '../model/dependent/DependentIn';
 import DependentListIn from '../model/dependent/DependentListIn';
-import { RequestClient, SeniorApi, HttpMethod, RequestReturn } from '@seniorsistemas/senior-core';
+import { RequestClient, HttpMethod, RequestReturn } from '@seniorsistemas/senior-core';
 
 export default class Dependent extends RequestClient {
-  #seniorApi: SeniorApi;
-
   constructor(hcmApi: HCMApi) {
     super(hcmApi, 'hcm', 'dependent');
   }
@@ -17,7 +15,7 @@ export default class Dependent extends RequestClient {
       method: HttpMethod.POST,
       data: dependentQueryInJSON,
       headers: {
-        authorization: this.#seniorApi.accessToken,
+        authorization: this.seniorApi.accessToken,
       },
     };
     return this.request(clientOptions);
@@ -32,7 +30,7 @@ export default class Dependent extends RequestClient {
       method: HttpMethod.POST,
       data: dependentListQueryJSON,
       headers: {
-        authorization: this.#seniorApi.accessToken,
+        authorization: this.seniorApi.accessToken,
       },
     };
     return this.request(clientOptions);

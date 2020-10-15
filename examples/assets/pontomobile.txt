@@ -1,0 +1,94 @@
+{
+    "employees": [
+        {
+            "pis": "75475147563",
+            "mail": "suelen@matiello.com.br",
+            "name": "Suelen",
+            "company": {
+                "cnpj": "17474540000100",
+                "name": "Ponto Mobile CO"
+            },
+            "managers": [{
+                "mail": "gestor3@matiello.com.br",
+                "platformUsers" :[{
+                	"username": "gestor3"
+                }]
+            }],
+            "externalId": "1-1-0",
+            "platformUsers": [
+                {
+                    "username": "suelen"
+                }
+            ]
+        },
+        {
+            "pis": "90472987734",
+            "mail": "gabriela@matiello.com.br",
+            "name": "Gabriela",
+            "company": {
+                "cnpj": "17474540000100",
+                "name": "Ponto Mobile CO"
+            },
+            "managers": [{
+                "mail": "gestor1@matiello.com.br",
+                "platformUsers" :[{
+                	"username": "gestor1"
+                },{
+                	"username": "gestor2"
+                }]
+            }],
+            "externalId": "1-1-1",
+            "platformUsers": [
+                {
+                    "username": "gabriela"
+                }
+            ]
+        },
+        {
+            "pis": "88334651623",
+            "mail": "rafael@matiello.com.br",
+            "name": "Rafael",
+            "company": {
+                "cnpj": "17474540000100",
+                "name": "Ponto Mobile CO"
+            },
+            "managers": [{
+                "mail": "gestor1@matiello.com.br",
+                "platformUsers" :[{
+                	"username": "gestor1"
+                },{
+                	"username": "gestor2"
+                }]
+            }],
+            "externalId": "1-1-2",
+            "platformUsers": [
+                {
+                    "username": "rafael"
+                }
+            ]
+        },
+        {
+            "pis": "49315007861",
+            "mail": "eduardo@matiello.com.br",
+            "name": "Eduardo",
+            "company": {
+                "cnpj": "17474540000100",
+                "name": "Ponto Mobile CO"
+            },
+            "managers": [{
+                "mail": "gestorE@matiello.com.br",
+                "platformUsers" :[{
+                	"username": "gestor1"
+                },{
+                	"username": "gestor2"
+                }]
+            }],
+            "externalId": "1-1-3",
+            "platformUsers": [
+                {
+                    "username": "eduardo"
+                }
+            ]
+        }
+    ]
+} 
