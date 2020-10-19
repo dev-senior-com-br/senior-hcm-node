@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+-   [ECOAPI-927](https://jira.senior.com.br/browse/ECOAPI-927): Adicionado endpoints do pontomobile
+
+### Added
 
 -   Criação dos POJOs das entidades do `hcm/payroll`
 -   Criação dos POJOs das entidades do `hcm/dependent`

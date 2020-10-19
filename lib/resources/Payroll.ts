@@ -1,9 +1,8 @@
 import EmployeeIn from '../model/employee/EmployeeIn';
-import { RequestClient, HttpMethod, RequestReturn, SeniorApi } from '@seniorsistemas/senior-core';
+import { RequestClient, HttpMethod, RequestReturn } from '@seniorsistemas/senior-core';
 import HCMApi from '../HCMApi';
 
 export default class Payroll extends RequestClient {
-  #seniorApi: SeniorApi;
 
   constructor(hcmApi: HCMApi) {
     super(hcmApi, 'hcm', 'payroll');
@@ -16,7 +15,7 @@ export default class Payroll extends RequestClient {
       method: HttpMethod.POST,
       data: employeeInJSON,
       headers: {
-        authorization: this.#seniorApi.accessToken,
+        authorization: this.seniorApi.accessToken,
       },
     };
     return this.request(clientOptions);
