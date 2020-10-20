@@ -9,21 +9,27 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { Country } from './country';
 
 
-export interface State { 
+export interface Company { 
     /**
-     * Nome do estado
+     * Código da empresa.
      */
-    name?: string;
+    code?: number;
     /**
-     * Id do estado
+     * Relacionamento com a sede da empresa
+     */
+    headquarter?: string;
+    /**
+     * Nome da empresa.
+     */
+    companyname?: string;
+    /**
+     * Id da entidade.
      */
     id?: string;
     /**
-     * Abreviação do nome do estado
+     * Cnpj da empresa.
      */
-    abbreviation?: string;
-    countryId?: Country;
+    cnpj?: string;
 }
