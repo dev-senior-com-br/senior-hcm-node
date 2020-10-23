@@ -9,21 +9,27 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import { Dependent } from './dependent';
 
 
-export interface Tutelage { 
+export interface Company { 
     /**
-     * Data final da tutela
+     * Código da empresa.
      */
-    endDate?: string;
+    code?: number;
     /**
-     * Id do tutelado
+     * Relacionamento com a sede da empresa
+     */
+    headquarter?: string;
+    /**
+     * Nome da empresa.
+     */
+    companyname?: string;
+    /**
+     * Id da entidade.
      */
     id?: string;
-    dependent?: Dependent;
     /**
-     * Data de inicio da tutela
+     * Cnpj da empresa.
      */
-    startDate?: string;
+    cnpj?: string;
 }
