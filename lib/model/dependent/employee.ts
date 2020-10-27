@@ -9,6 +9,7 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
+import { Company } from './company';
 import { EmployeeType } from './employeeType';
 import { Person } from './person';
 
@@ -20,10 +21,15 @@ export interface Employee {
      * Empresa do colaborador: NUMEMP
      */
     companynumber?: number;
+    employer?: Company;
     /**
      * Id do colaborador
      */
     id?: string;
+    /**
+     * Data de admissão
+     */
+    hiredate?: string;
     /**
      * Código do colaborador: NUMCAD
      */
