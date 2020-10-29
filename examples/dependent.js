@@ -10,13 +10,19 @@ var DependentListIn = require('../dist/index').DependentListIn;
 var Pagination = require('@seniorsistemas/senior-core/dist/lib/model/Pagination').Pagination;
 
 var hcmApi = new HCMApi();
-var dependentIn = new DependentIn();
-var dependentListIn = new DependentListIn();
-var pagination = new Pagination();
+var dependentIn = {
+    dependentId: DEPENDENT_ID
+};
+var dependentListIn = {
+    employeeId: EMPLOYEE_ID,
+    page: {
+        current: 0,
+        size: 0
+    }
+}
 
 hcmApi.authentication.login(USERNAME, PASS).then(function (json) {
     hcmApi.accessToken = JSON.parse(json.body.jsonToken).access_token;
-    dependentIn.dependentId = DEPENDENT_ID;
 
     hcmApi.dependent.dependentQuery(dependentIn).then(function (json) {
         if (json.statusCode != 200) {
@@ -28,10 +34,6 @@ hcmApi.authentication.login(USERNAME, PASS).then(function (json) {
         console.error("Erro na tentativa de listar dependente: ", error);
     });
 
-    dependentListIn.employeeId = EMPLOYEE_ID;
-    pagination.current = 0;
-    pagination.size = 0;
-    dependentListIn.page = pagination;
     hcmApi.dependent.dependentListQuery(dependentListIn).then(function (json) {
         if (json.statusCode != 200) {
             console.error(json);

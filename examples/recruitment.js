@@ -11,16 +11,27 @@ var PASS = process.env.PASS;
 var VACANCY_ID = process.env.VACANCY_ID;
 
 var hcmApi = new HCMApi();
-var vacanciesIn = new VacanciesIn();
-var vacancyDetailsIn = new VacancyDetailsIn();
-var vacancyDetailsSummaryIn = new VacancyDetailsSummaryIn();
-var searchPersonsIn = new SearchPersonsIn();
+var vacanciesIn = {
+	situation: ["IN_PROGRESS"],
+	vacancyId: VACANCY_ID
+}
+var vacancyDetailsIn = {
+	id: VACANCY_ID
+}
+var vacancyDetailsSummaryIn = {
+	vacancyId: VACANCY_ID
+}
+
+const d = new Date();
+const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+const mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(d);
+const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+var searchPersonsIn = {
+	referenceDate: `${ye}-${mo}-${da}`
+}
 
 hcmApi.authentication.login(USERNAME, PASS).then(function (json) {
 	hcmApi.accessToken = JSON.parse(json.body.jsonToken).access_token;
-	vacanciesIn.situation = ["IN_PROGRESS"];
-	vacanciesIn.vacancyId = VACANCY_ID;
-	
     hcmApi.recruitment.listVacancies(vacanciesIn).then(function (json) {
 		if (json.statusCode != 200) {
 			console.error(json);
@@ -31,7 +42,6 @@ hcmApi.authentication.login(USERNAME, PASS).then(function (json) {
 		console.error("Erro na tentativa de listar Vagas: ", error);
 	});
 
-	vacancyDetailsIn.id = VACANCY_ID;
 	hcmApi.recruitment.vacancyDetails(vacancyDetailsIn).then(function (json) {
 		if (json.statusCode != 200) {
 			console.error(json);
@@ -42,7 +52,6 @@ hcmApi.authentication.login(USERNAME, PASS).then(function (json) {
 		console.error("Erro na tentativa de verificar vaga de id 9E8BC3478C8040558FA06C7C85FF3B28: ", error);
 	});
 	
-	vacancyDetailsSummaryIn.vacancyId = VACANCY_ID;
 	hcmApi.recruitment.vacancyDetailsSummary(vacancyDetailsSummaryIn).then(function (json) {
 		if (json.statusCode != 200) {
 			console.error(json);
@@ -52,12 +61,6 @@ hcmApi.authentication.login(USERNAME, PASS).then(function (json) {
 	}).catch(function (error) {
 		console.error(`Erro na tentativa de verificar detalhes vaga de id ${VACANCY_ID}: `, error);
 	}); 
-
-	const d = new Date();
-	const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
-	const mo = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(d);
-	const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
-	searchPersonsIn.referenceDate = `${ye}-${mo}-${da}`;
 	hcmApi.recruitment.searchPersons(searchPersonsIn).then(function (json) {
 		if (json.statusCode != 200) {
 			console.error(json);
