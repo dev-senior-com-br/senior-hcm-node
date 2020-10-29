@@ -1,7 +1,9 @@
 require('dotenv').config();
 
-var username = process.env.SENIOR_USERNAME;
-var password = process.env.PASS;
+var USERNAME = process.env.SENIOR_USERNAME;
+var PASS = process.env.PASS;
+var DEPENDENT_ID = process.env.DEPENDENT_ID;
+var EMPLOYEE_ID = process.env.EMPLOYEE_ID;
 var HCMApi = require('../dist/index').HCMApi;
 var DependentIn = require('../dist/index').DependentIn;
 var DependentListIn = require('../dist/index').DependentListIn;
@@ -12,9 +14,9 @@ var dependentIn = new DependentIn();
 var dependentListIn = new DependentListIn();
 var pagination = new Pagination();
 
-hcmApi.authentication.login(username, password).then(function (json) {
+hcmApi.authentication.login(USERNAME, PASS).then(function (json) {
     hcmApi.accessToken = JSON.parse(json.body.jsonToken).access_token;
-    dependentIn.dependentId = "2182988098EE44F887F88BBC85F300A9";
+    dependentIn.dependentId = DEPENDENT_ID;
 
     hcmApi.dependent.dependentQuery(dependentIn).then(function (json) {
         if (json.statusCode != 200) {
@@ -26,7 +28,7 @@ hcmApi.authentication.login(username, password).then(function (json) {
         console.error("Erro na tentativa de listar dependente: ", error);
     });
 
-    dependentListIn.employeeId = "9E8BC3478C8040558FA06C7C85FF3B28";
+    dependentListIn.employeeId = EMPLOYEE_ID;
     pagination.current = 0;
     pagination.size = 0;
     dependentListIn.page = pagination;
@@ -37,7 +39,7 @@ hcmApi.authentication.login(username, password).then(function (json) {
             console.log(json.body);
         }
     }).catch(function (error) {
-        console.error("Erro na tentativa de verificar vaga de id 9E8BC3478C8040558FA06C7C85FF3B28: ", error);
+        console.error(`Erro na tentativa de verificar vaga de id ${EMPLOYEE_ID}: `, error);
     });
 
     if (hcmApi.accessToken) {

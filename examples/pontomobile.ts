@@ -4,15 +4,15 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 import axios from 'axios';
 
-const username = process.env.SENIOR_USERNAME;
-const password = process.env.PASS;
+const USERNAME = process.env.SENIOR_USERNAME;
+const PASS = process.env.PASS;
 
 const hcmApi = new HCMApi();
 const filename = 'pontomobile.txt';
 const file = readFileSync(join(__dirname, 'assets', filename));
 
 hcmApi.authentication
-  .login(username, password)
+  .login(USERNAME, PASS)
   .then(async json => {
     hcmApi.accessToken = JSON.parse(json.body.jsonToken).access_token;
     let fileId = null;

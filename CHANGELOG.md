@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
+-   [ECOAPI-855](https://jira.senior.com.br/browse/ECOAPI-855): Adicionado documentação para uso dos exemplos.
+
+### Changed
+
+-   [ECOAPI-855](https://jira.senior.com.br/browse/ECOAPI-855): Ajustado os payloads de entrada nos metodos dos resources para que fique de maneira mais organizada.
+
+### Added
 -   [ECOAPI-927](https://jira.senior.com.br/browse/ECOAPI-927): Adicionado endpoints do pontomobile
 
 ### Added

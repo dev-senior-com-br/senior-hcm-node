@@ -3,15 +3,16 @@ require('dotenv').config();
 var HCMApi = require('../dist/index').HCMApi;
 var EmployeeIn = require('../dist/index').EmployeeIn;
 
-var username = process.env.SENIOR_USERNAME;
-var password = process.env.PASS;
+var USERNAME = process.env.SENIOR_USERNAME;
+var PASS = process.env.PASS;
+var EMPLOYEE_ID = process.env.EMPLOYEE_ID
 
 var hcmApi = new HCMApi();
 var employeeIn = new EmployeeIn();
 
-hcmApi.authentication.login(username, password).then(function (json) {
+hcmApi.authentication.login(USERNAME, PASS).then(function (json) {
     hcmApi.accessToken = JSON.parse(json.body.jsonToken).access_token;
-    employeeIn.employeeId = "2182988098EE44F887F88BBC85F300A9";
+    employeeIn.employeeId = EMPLOYEE_ID;
 
     const d = new Date();
     const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);

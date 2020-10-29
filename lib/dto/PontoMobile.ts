@@ -64,3 +64,33 @@ interface Employee {
   enabled: boolean;
   dataOrigin: string;
 }
+
+export interface BlobServiceRequestUploadFileOut {
+  fileId: string;
+  version: string;
+  locationURI: string;
+}
+
+export interface BlobServiceRequestCommitUploadedFileIn {
+  fileId: string;
+  version: string;
+}
+
+export interface BlobServiceRequestCommitUploadedFileOut {
+  fileId: string;
+}
+
+export interface ClockingEventExportOut {
+  locationURI: string;
+}
+
+export interface ClockingEventExportByPeriodIn {
+  period: {
+    initialDate: string;
+    finalDate: string;
+    initialTime?: string;
+    finalTime?: string;
+  };
+  fileType: string;
+  exportGeolocation?: boolean;
+}

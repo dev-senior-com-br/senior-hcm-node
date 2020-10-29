@@ -6,8 +6,9 @@ var VacancyDetailsIn = require('../dist/index').VacancyDetailsIn;
 var VacancyDetailsSummaryIn = require('../dist/index').VacancyDetailsSummaryIn;
 var SearchPersonsIn = require('../dist/index').SearchPersonsIn;
 
-var username = process.env.SENIOR_USERNAME;
-var password = process.env.PASS;
+var USERNAME = process.env.SENIOR_USERNAME;
+var PASS = process.env.PASS;
+var VACANCY_ID = process.env.VACANCY_ID;
 
 var hcmApi = new HCMApi();
 var vacanciesIn = new VacanciesIn();
@@ -15,10 +16,10 @@ var vacancyDetailsIn = new VacancyDetailsIn();
 var vacancyDetailsSummaryIn = new VacancyDetailsSummaryIn();
 var searchPersonsIn = new SearchPersonsIn();
 
-hcmApi.authentication.login(username, password).then(function (json) {
+hcmApi.authentication.login(USERNAME, PASS).then(function (json) {
 	hcmApi.accessToken = JSON.parse(json.body.jsonToken).access_token;
 	vacanciesIn.situation = ["IN_PROGRESS"];
-	vacanciesIn.vacancyId = "9E8BC3478C8040558FA06C7C85FF3B28";
+	vacanciesIn.vacancyId = VACANCY_ID;
 	
     hcmApi.recruitment.listVacancies(vacanciesIn).then(function (json) {
 		if (json.statusCode != 200) {
@@ -30,7 +31,7 @@ hcmApi.authentication.login(username, password).then(function (json) {
 		console.error("Erro na tentativa de listar Vagas: ", error);
 	});
 
-	vacancyDetailsIn.id = "9E8BC3478C8040558FA06C7C85FF3B28";
+	vacancyDetailsIn.id = VACANCY_ID;
 	hcmApi.recruitment.vacancyDetails(vacancyDetailsIn).then(function (json) {
 		if (json.statusCode != 200) {
 			console.error(json);
@@ -41,7 +42,7 @@ hcmApi.authentication.login(username, password).then(function (json) {
 		console.error("Erro na tentativa de verificar vaga de id 9E8BC3478C8040558FA06C7C85FF3B28: ", error);
 	});
 	
-	vacancyDetailsSummaryIn.vacancyId = "9E8BC3478C8040558FA06C7C85FF3B28";
+	vacancyDetailsSummaryIn.vacancyId = VACANCY_ID;
 	hcmApi.recruitment.vacancyDetailsSummary(vacancyDetailsSummaryIn).then(function (json) {
 		if (json.statusCode != 200) {
 			console.error(json);
@@ -49,7 +50,7 @@ hcmApi.authentication.login(username, password).then(function (json) {
 			console.log(json.body);
 		}
 	}).catch(function (error) {
-		console.error("Erro na tentativa de verificar detalhes vaga de id 9E8BC3478C8040558FA06C7C85FF3B28: ", error);
+		console.error(`Erro na tentativa de verificar detalhes vaga de id ${VACANCY_ID}: `, error);
 	}); 
 
 	const d = new Date();
