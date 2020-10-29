@@ -1,7 +1,19 @@
 export interface EmployeesImportByFileIdOut {
+  /**
+   * Resposta da importação
+   */
   importResult: {
+    /**
+     * Conjunto de erros da importação
+     */
     importErros: {
+      /**
+       * Erros encontrados durante a importação
+       */
       errors: string[];
+      /**
+       * Empregado vinculado aos erros
+       */
       employee: Employee;
     }[];
   };
@@ -72,25 +84,58 @@ export interface BlobServiceRequestUploadFileOut {
 }
 
 export interface BlobServiceRequestCommitUploadedFileIn {
+  /**
+   * O identificador único do arquivo. Composto pelo ID + o nome do arquivo (separados por /).
+   */
   fileId: string;
+  /**
+   * Versão do arquivo.
+   */
   version: string;
 }
 
 export interface BlobServiceRequestCommitUploadedFileOut {
+  /**
+   * O identificador único do arquivo. Composto pelo ID + o nome do arquivo (separados por /).
+   */
   fileId: string;
 }
 
 export interface ClockingEventExportOut {
+  /**
+   * Url para donwload do arquivo
+   */
   locationURI: string;
 }
 
 export interface ClockingEventExportByPeriodIn {
+  /**
+   * Período
+   */
   period: {
+    /**
+     * Data inicial
+     */
     initialDate: string;
+    /**
+     * Data final
+     */
     finalDate: string;
+    /**
+     * Hora inicial
+     */
     initialTime?: string;
+    /**
+     * Hora final
+     */
     finalTime?: string;
   };
+  /**
+   * Tipo do arquivo
+   */
   fileType: string;
+  /**
+   * Exportar geolocalização"
+   */
   exportGeolocation?: boolean;
 }
