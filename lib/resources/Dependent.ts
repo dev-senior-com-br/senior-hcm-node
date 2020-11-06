@@ -1,19 +1,17 @@
 import HCMApi from '../HCMApi';
-import DependentIn from '../model/dependent/DependentIn';
-import DependentListIn from '../model/dependent/DependentListIn';
 import { RequestClient, HttpMethod, RequestReturn } from '@seniorsistemas/senior-core';
+import { DependentQueryDTO, DependentListQueryDTO } from '../dto/Dependent';
 
 export default class Dependent extends RequestClient {
   constructor(hcmApi: HCMApi) {
     super(hcmApi, 'hcm', 'dependent');
   }
 
-  dependentQuery(dependentQueryIn: DependentIn): Promise<RequestReturn> {
-    const dependentQueryInJSON = JSON.parse(dependentQueryIn.toJsonString());
+  dependentQuery(dependentQueryIn: DependentQueryDTO): Promise<RequestReturn> {
     const clientOptions = {
       url: this.getUrlPath('queries/dependentQuery'),
       method: HttpMethod.POST,
-      data: dependentQueryInJSON,
+      data: dependentQueryIn,
       headers: {
         authorization: this.seniorApi.accessToken,
       },
@@ -21,14 +19,11 @@ export default class Dependent extends RequestClient {
     return this.request(clientOptions);
   }
 
-  dependentListQuery(dependentListQuery: DependentListIn): Promise<RequestReturn> {
-    const dependentListQueryJSON = JSON.parse(
-      dependentListQuery.toJsonString()
-    );
+  dependentListQuery(dependentListQuery: DependentListQueryDTO): Promise<RequestReturn> {
     const clientOptions = {
       url: this.getUrlPath('queries/dependentListQuery'),
       method: HttpMethod.POST,
-      data: dependentListQueryJSON,
+      data: dependentListQuery,
       headers: {
         authorization: this.seniorApi.accessToken,
       },

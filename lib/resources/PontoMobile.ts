@@ -1,14 +1,9 @@
 import HCMApi from '../HCMApi';
 import { RequestClient, HttpMethod, RequestReturn } from '@seniorsistemas/senior-core';
-import { EmployeesImportByFileIdOut } from '../model/pontomobile/EmployeesImportByFileId';
-import { BlobServiceRequestUploadFileOut } from '../model/pontomobile/BlobServiceRequestUploadFile';
-import { ClockingEventExportOut } from '../model/pontomobile/ClockingEventExport';
 import {
-  BlobServiceRequestCommitUploadedFileIn,
-  BlobServiceRequestCommitUploadedFileOut,
-} from '../model/pontomobile/BlobServiceRequestCommitUploadedFile';
-import { ClockingEventExportByPeriodOut } from '../model/pontomobile/ClockingEventExportByPeriod';
-import { ClockingEventExportByPeriodIn } from '../model/pontomobile/ClockingEventExportByPeriod';
+  EmployeesImportByFileIdOut, BlobServiceRequestUploadFileOut, BlobServiceRequestCommitUploadedFileOut,
+  BlobServiceRequestCommitUploadedFileIn, ClockingEventExportOut, ClockingEventExportByPeriodIn
+} from '../dto/PontoMobile';
 
 export default class PontoMobile extends RequestClient {
 
@@ -68,7 +63,7 @@ export default class PontoMobile extends RequestClient {
 
   clockingEventExportByPeriod(
     input: ClockingEventExportByPeriodIn
-  ): Promise<RequestReturn<ClockingEventExportByPeriodOut>> {
+  ): Promise<RequestReturn<ClockingEventExportOut>> {
     const clientOptions = {
       url: this.getUrlPath('actions/clockingEventExportByPeriod'),
       method: HttpMethod.POST,
