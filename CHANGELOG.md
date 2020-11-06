@@ -7,7 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2020-11-06
+
 ### Added
+
 -   [ECOAPI-927](https://jira.senior.com.br/browse/ECOAPI-927): Adicionado endpoints do pontomobile
 
 ### Added
@@ -31,7 +34,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-[Unreleased]: https://github.com/dev-senior-com-br/senior-hcm-node/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/dev-senior-com-br/senior-hcm-node/compare/1.2.0...HEAD
+
+[1.2.0]: https://github.com/dev-senior-com-br/senior-hcm-node/compare/1.1.0...1.2.0
 
 [1.1.0]: https://github.com/dev-senior-com-br/senior-hcm-node/compare/v1.0.0...1.1.0
 
