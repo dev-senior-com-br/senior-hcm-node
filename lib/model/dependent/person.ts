@@ -15,7 +15,7 @@ export interface Person {
     /**
      * Primeiro nome
      */
-    firstname?: string;
+    firstname: string;
     /**
      * Id do upload da foto da g7
      */
@@ -31,5 +31,5 @@ export interface Person {
     /**
      * Último nome
      */
-    lastname?: string;
+    lastname: string;
 }

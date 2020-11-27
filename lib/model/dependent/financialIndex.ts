@@ -14,19 +14,19 @@ import { InformationType } from './informationType';
 
 
 export interface FinancialIndex { 
-    indexType?: IndexType;
+    indexType: IndexType;
     /**
      * Código do índice
      */
-    code?: number;
+    code: number;
     /**
      * Quantidade de decimais
      */
-    numberOfDecimals?: number;
+    numberOfDecimals: number;
     /**
      * Nome do índice
      */
-    name?: string;
+    name: string;
     /**
      * Id do índice
      */
@@ -34,6 +34,6 @@ export interface FinancialIndex {
     /**
      * Quantidade de dígitos
      */
-    numberOfDigits?: number;
-    informationType?: InformationType;
+    numberOfDigits: number;
+    informationType: InformationType;
 }

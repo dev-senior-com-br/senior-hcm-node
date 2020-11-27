@@ -13,15 +13,15 @@ import { Bank } from './bank';
 
 
 export interface BankBranch { 
-    bank?: Bank;
+    bank: Bank;
     /**
      * Número da agência
      */
-    code?: number;
+    code: number;
     /**
      * Nome da agência
      */
-    name?: string;
+    name: string;
     /**
      * Id da entidade
      */

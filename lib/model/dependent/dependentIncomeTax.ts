@@ -16,18 +16,18 @@ export interface DependentIncomeTax {
     /**
      * Inicio da competência
      */
-    beginCompetence?: string;
+    beginCompetence: string;
     /**
      * Fim da competência
      */
-    endCompetence?: string;
+    endCompetence: string;
     /**
      * Idade limite imposto de renda
      */
-    ageLimitIncomeTax?: number;
+    ageLimitIncomeTax: number;
     /**
      * Id da entidade
      */
     id?: string;
-    dependent?: Dependent;
+    dependent: Dependent;
 }

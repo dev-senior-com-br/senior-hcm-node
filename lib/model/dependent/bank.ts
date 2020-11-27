@@ -15,11 +15,11 @@ export interface Bank {
     /**
      * Número do banco
      */
-    code?: number;
+    code: number;
     /**
      * Descrição
      */
-    name?: string;
+    name: string;
     /**
      * Id do banco
      */

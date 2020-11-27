@@ -17,7 +17,7 @@ import { SalaryAdvancedType } from './salaryAdvancedType';
 
 export interface FixedJudicialValue { 
     financialIndex?: FinancialIndex;
-    vacationType?: DecisionType;
+    vacationType: DecisionType;
     /**
      * Porcentagem do adiantamento salarial para a pensão
      */
@@ -34,13 +34,13 @@ export interface FixedJudicialValue {
      * Id da entidade
      */
     id?: string;
-    salary13Type?: Salary13Type;
-    salaryAdvancedType?: SalaryAdvancedType;
-    wageBonusType?: DecisionType;
+    salary13Type: Salary13Type;
+    salaryAdvancedType: SalaryAdvancedType;
+    wageBonusType: DecisionType;
     /**
      * Valor inicial
      */
-    initialValue?: number;
+    initialValue: number;
     /**
      * Dia da correção
      */

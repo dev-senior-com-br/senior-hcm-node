@@ -18,10 +18,10 @@ export interface BankAccount {
     /**
      * Conta bancária.
      */
-    bankAccount?: string;
-    bank?: Bank;
-    bankBranch?: BankBranch;
-    accountType?: AccountType;
+    bankAccount: string;
+    bank: Bank;
+    bankBranch: BankBranch;
+    accountType: AccountType;
     /**
      * Id da entidade
      */

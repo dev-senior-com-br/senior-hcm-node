@@ -16,8 +16,8 @@ export interface Phone {
     /**
      * Número do telefone
      */
-    number?: string;
-    phoneType?: PhoneType;
+    number: string;
+    phoneType: PhoneType;
     /**
      * Ramal do telefone
      */
@@ -25,11 +25,11 @@ export interface Phone {
     /**
      * Código do país (DDI)
      */
-    internationalCode?: string;
+    internationalCode: string;
     /**
      * Código da localidade (DDD)
      */
-    localCode?: string;
+    localCode: string;
     /**
      * Id da entidade
      */

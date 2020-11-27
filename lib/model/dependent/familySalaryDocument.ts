@@ -18,36 +18,36 @@ export interface FamilySalaryDocument {
     /**
      * Percentual em novembro
      */
-    percentageInNovember?: number;
+    percentageInNovember: number;
     /**
      * Frequência em novembro
      */
-    frequencyInNovember?: string;
-    school?: Othercompany;
+    frequencyInNovember: string;
+    school: Othercompany;
     /**
      * Ano de referência
      */
-    referenceYear?: number;
+    referenceYear: number;
     /**
      * É bolsista?
      */
-    scholarship?: boolean;
+    scholarship: boolean;
     /**
      * Frequência em maio
      */
-    frequencyInMay?: string;
+    frequencyInMay: string;
     /**
      * Id da entidade
      */
     id?: string;
-    schoolGrade?: SchoolGradeType;
+    schoolGrade: SchoolGradeType;
     /**
      * Percentual em maio
      */
-    percentageInMay?: number;
-    dependent?: Dependent;
+    percentageInMay: number;
+    dependent: Dependent;
     /**
      * Vacinação
      */
-    vaccination?: string;
+    vaccination: string;
 }
