@@ -10,19 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 -   [ECOAPI-855](https://jira.senior.com.br/browse/ECOAPI-855): Adicionado documentação para uso dos exemplos.
+-   [ECOAPI-927](https://jira.senior.com.br/browse/ECOAPI-927): Adicionado endpoints do pontomobile
+-   Criação dos POJOs das entidades do `hcm/payroll`
+-   Criação dos POJOs das entidades do `hcm/dependent`
 
 ### Changed
 
 -   [ECOAPI-855](https://jira.senior.com.br/browse/ECOAPI-855): Ajustado os payloads de entrada nos metodos dos resources para que fique de maneira mais organizada.
--   Atualização dos POJOs das entidades do `hcm/payroll`
-
-### Added
--   [ECOAPI-927](https://jira.senior.com.br/browse/ECOAPI-927): Adicionado endpoints do pontomobile
-
-### Added
-
--   Criação dos POJOs das entidades do `hcm/payroll`
--   Criação dos POJOs das entidades do `hcm/dependent`
 
 ## [1.1.0] - 2020-08-17
 
