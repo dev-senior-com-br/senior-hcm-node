@@ -16,14 +16,14 @@ export interface ChildcareAssistance {
     /**
      * Meses
      */
-    months?: number;
+    months: number;
     /**
      * Id do auxílio creche
      */
     id?: string;
-    dependent?: Dependent;
+    dependent: Dependent;
     /**
      * Se tem auxílio creche
      */
-    childcareAssistance?: boolean;
+    childcareAssistance: boolean;
 }

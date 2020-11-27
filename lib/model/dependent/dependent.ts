@@ -23,11 +23,11 @@ export interface Dependent {
     /**
      * Representa se o dependente é elegível a pensão alimentícia
      */
-    iseligibletoalimony?: boolean;
+    iseligibletoalimony: boolean;
     /**
      * Nome da mãe
      */
-    mothersname?: string;
+    mothersname: string;
     /**
      * Data de nascimento
      */
@@ -36,23 +36,23 @@ export interface Dependent {
     /**
      * Limite de idade para pensão familiar
      */
-    agelimitfamilysalary?: number;
+    agelimitfamilysalary: number;
     /**
      * Data da invalidez
      */
     disabilityDate?: string;
-    educationdegree?: Educationdegree;
+    educationdegree: Educationdegree;
     /**
      * Data de óbito
      */
-    deathdate?: string;
-    employee?: Employee;
-    type?: KinshipDegreeType;
+    deathdate: string;
+    employee: Employee;
+    type: KinshipDegreeType;
     attachment?: Attachment;
     /**
      * CPF
      */
-    cpf?: string;
+    cpf: string;
     /**
      * Id do dependente
      */
@@ -60,52 +60,52 @@ export interface Dependent {
     /**
      * Número do registro
      */
-    registerNumber?: string;
+    registerNumber: string;
     /**
      * Certidão de óbito
      */
-    deathcertificate?: string;
+    deathcertificate: string;
     /**
      * Declaração de nascimento
      */
-    livebirthdeclaration?: string;
+    livebirthdeclaration: string;
     /**
      * Representa se o dependente é contabilizado no IRRF
      */
-    isaccountedforirrf?: boolean;
+    isaccountedforirrf: boolean;
     /**
      * Representa se o dependente é elegível para subsídio familiar (Salário família)
      */
-    iseligibletofamilyallowence?: boolean;
-    eSocialDependentType?: ESocialDependentType;
+    iseligibletofamilyallowence: boolean;
+    eSocialDependentType: ESocialDependentType;
     placeofbirth?: City;
     /**
      * Número da folha
      */
-    sheetNumber?: string;
+    sheetNumber: string;
     /**
      * RG
      */
-    rg?: string;
-    maritalstatus?: MaritalStatusType;
+    rg: string;
+    maritalstatus: MaritalStatusType;
     /**
      * Número do livro
      */
-    bookNumber?: string;
+    bookNumber: string;
     /**
      * Limite de idade para IR
      */
-    agelimitir?: number;
+    agelimitir: number;
     /**
      * Certidão de nascimento
      */
-    birthcertificate?: string;
+    birthcertificate: string;
     /**
      * Nome completo
      */
-    fullname?: string;
+    fullname: string;
     /**
      * Nome do cartório
      */
-    nameNotary?: string;
+    nameNotary: string;
 }

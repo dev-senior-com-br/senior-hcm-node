@@ -16,12 +16,12 @@ export interface Neighborhood {
     /**
      * Código do bairro
      */
-    code?: number;
+    code: number;
     city?: City;
     /**
      * Nome do bairro.
      */
-    name?: string;
+    name: string;
     /**
      * Id do bairro.
      */

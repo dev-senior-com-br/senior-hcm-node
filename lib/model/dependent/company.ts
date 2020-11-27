@@ -23,7 +23,7 @@ export interface Company {
     /**
      * Nome da empresa.
      */
-    companyname?: string;
+    companyname: string;
     /**
      * Id da entidade.
      */
@@ -31,5 +31,5 @@ export interface Company {
     /**
      * Cnpj da empresa.
      */
-    cnpj?: string;
+    cnpj: string;
 }

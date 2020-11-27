@@ -23,7 +23,7 @@ import { VariableJudicialValue } from './variableJudicialValue';
 export interface JudicialPension { 
     bankAccount?: BankAccount;
     address?: Address;
-    baseCalculationType?: BaseCalculationType;
+    baseCalculationType: BaseCalculationType;
     variableJudicialValue?: VariableJudicialValue;
     /**
      * Data de encerramento
@@ -33,7 +33,7 @@ export interface JudicialPension {
      * Cota salário família
      */
     familySalaryQuota?: number;
-    methodPaymentType?: MethodPaymentType;
+    methodPaymentType: MethodPaymentType;
     /**
      * Sequência do cadastro
      */
@@ -48,11 +48,11 @@ export interface JudicialPension {
      */
     id?: string;
     judicialDistrict?: City;
-    dependent?: Dependent;
+    dependent: Dependent;
     /**
      * Data de inicio
      */
-    startDate?: string;
+    startDate: string;
     /**
      * Conta contábil
      */

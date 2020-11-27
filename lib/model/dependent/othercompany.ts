@@ -16,24 +16,24 @@ export interface Othercompany {
     /**
      * Número da inscrição
      */
-    subscriptionNumber?: number;
-    subscriptionType?: SubscriptionType;
+    subscriptionNumber: number;
+    subscriptionType: SubscriptionType;
     /**
      * Data fim da validade
      */
-    endDate?: string;
+    endDate: string;
     /**
      * Número inscrição CNO
      */
-    subscriptionNumberCNO?: number;
+    subscriptionNumberCNO: number;
     /**
      * Nome da outra empresa
      */
-    name?: string;
+    name: string;
     /**
      * Apelido da outra empresa
      */
-    nickname?: string;
+    nickname: string;
     /**
      * Id da outra empresa
      */
@@ -41,9 +41,9 @@ export interface Othercompany {
     /**
      * Inscrição no CAEPF (número)
      */
-    subscriptionNumberCAEPF?: number;
+    subscriptionNumberCAEPF: number;
     /**
      * Data de inicio da validade
      */
-    startDate?: string;
+    startDate: string;
 }

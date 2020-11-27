@@ -20,14 +20,14 @@ export interface FamilySalary {
     /**
      * Idade limite do salário familia
      */
-    ageLimitSalaryFamily?: number;
+    ageLimitSalaryFamily: number;
     /**
      * Aviso impresso
      */
-    printedNotice?: boolean;
+    printedNotice: boolean;
     /**
      * Data de entrega da certidão
      */
-    certificateSubmission?: string;
-    dependent?: Dependent;
+    certificateSubmission: string;
+    dependent: Dependent;
 }

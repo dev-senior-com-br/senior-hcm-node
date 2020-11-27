@@ -16,18 +16,18 @@ export interface DependentHealthInsurance {
     /**
      * Data da exclusão
      */
-    endDate?: string;
+    endDate: string;
     /**
      * Matrícula
      */
-    registration?: number;
+    registration: number;
     /**
      * Id da entidade
      */
     id?: string;
-    dependent?: Dependent;
+    dependent: Dependent;
     /**
      * Data da inclusão
      */
-    startDate?: string;
+    startDate: string;
 }

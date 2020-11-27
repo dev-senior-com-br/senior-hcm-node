@@ -17,7 +17,7 @@ export interface City {
     /**
      * Nome da cidade
      */
-    name?: string;
+    name: string;
     /**
      * Id da cidade
      */

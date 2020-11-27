@@ -35,11 +35,11 @@ export interface Attachment {
     /**
      * Nome do arquivo
      */
-    name?: string;
+    name: string;
     /**
      * Identificador
      */
-    id?: string;
+    id: string;
     /**
      * Versão do arquivo temporário
      */

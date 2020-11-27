@@ -16,30 +16,30 @@ export interface VariableJudicialValue {
     /**
      * Valor mínimo
      */
-    minimumValue?: number;
+    minimumValue: number;
     /**
      * Percentual da pensão judicial
      */
-    judicialPensionPercentage?: number;
+    judicialPensionPercentage: number;
     /**
      * Percentual de bônus do salário (PLR) da pensão
      */
-    judicialPensionWageBonus?: number;
+    judicialPensionWageBonus: number;
     /**
      * Percentual de FGTS da pensão
      */
-    judicialPensionFgts?: number;
+    judicialPensionFgts: number;
     /**
      * Percentual de férias da pensão
      */
-    judicialPensionVacation?: number;
+    judicialPensionVacation: number;
     /**
      * Id da entidade
      */
     id?: string;
-    fgtsPensionType?: FgtsPensionType;
+    fgtsPensionType: FgtsPensionType;
     /**
      * Percentual de 13o salário da pensão
      */
-    judicialPension13Salary?: number;
+    judicialPension13Salary: number;
 }

@@ -16,14 +16,14 @@ export interface Tutelage {
     /**
      * Data final da tutela
      */
-    endDate?: string;
+    endDate: string;
     /**
      * Id do tutelado
      */
     id?: string;
-    dependent?: Dependent;
+    dependent: Dependent;
     /**
      * Data de inicio da tutela
      */
-    startDate?: string;
+    startDate: string;
 }

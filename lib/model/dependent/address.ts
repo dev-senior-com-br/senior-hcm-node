@@ -15,15 +15,15 @@ import { Neighborhood } from './neighborhood';
 
 
 export interface Address { 
-    neighborhoodId?: Neighborhood;
+    neighborhoodId: Neighborhood;
     /**
      * Número do endereço.
      */
-    number?: string;
+    number: string;
     /**
      * Endereço.
      */
-    address?: string;
+    address: string;
     /**
      * Código postal do endereço (CEP)
      */
@@ -32,7 +32,7 @@ export interface Address {
      * Informação adicional referente ao endereço.
      */
     additional?: string;
-    addresstype?: AddressType;
+    addresstype: AddressType;
     /**
      * Id da entidade
      */
