@@ -11,7 +11,7 @@
  */
 
 
-export type EmployeeContractType = 'Employee' | 'Manager' | 'FarmWorker' | 'Retired' | 'Trainee' | 'Apprentice' | 'FixedDueDate' | 'RetiredManager' | 'PublicAgent' | 'Teacher' | 'CooperativeWorker' | 'DomesticWorker' | 'TeacherFixedDueDate';
+export type EmployeeContractType = 'Employee' | 'Manager' | 'FarmWorker' | 'Retired' | 'Trainee' | 'Apprentice' | 'FixedDueDate' | 'RetiredManager' | 'PublicAgent' | 'Teacher' | 'CooperativeWorker' | 'DomesticWorker' | 'TeacherFixedDueDate' | 'ThirdParty';
 
 export const EmployeeContractType = {
     Employee: 'Employee' as EmployeeContractType,
@@ -26,5 +26,6 @@ export const EmployeeContractType = {
     Teacher: 'Teacher' as EmployeeContractType,
     CooperativeWorker: 'CooperativeWorker' as EmployeeContractType,
     DomesticWorker: 'DomesticWorker' as EmployeeContractType,
-    TeacherFixedDueDate: 'TeacherFixedDueDate' as EmployeeContractType
+    TeacherFixedDueDate: 'TeacherFixedDueDate' as EmployeeContractType,
+    ThirdParty: 'ThirdParty' as EmployeeContractType
 };
