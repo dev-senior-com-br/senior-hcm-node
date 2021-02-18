@@ -54,6 +54,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [1.4.0]: https://github.com/dev-senior-com-br/senior-hcm-node/compare/1.3.0...1.4.0
 
+[1.3.0]: https://github.com/dev-senior-com-br/senior-hcm-node/compare/1.2.0...1.3.0
+
+[1.2.0]: https://github.com/dev-senior-com-br/senior-hcm-node/compare/1.1.0...1.2.0
+
 [1.1.0]: https://github.com/dev-senior-com-br/senior-hcm-node/compare/v1.0.0...1.1.0
 
 [1.0.0]: https://github.com/dev-senior-com-br/senior-hcm-node/releases/tag/v1.0.0
