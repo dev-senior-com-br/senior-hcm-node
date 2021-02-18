@@ -24,7 +24,7 @@ export interface DependentIncomeTax {
     /**
      * Idade limite imposto de renda
      */
-    ageLimitIncomeTax: number;
+    ageLimitIncomeTax?: number;
     /**
      * Id da entidade
      */
