@@ -61,6 +61,10 @@ export interface Historicalleave {
     workAccidentType?: WorkAccidentType;
     subgroupDisease?: SubgroupDisease;
     initialSituation?: Timetrackingsituation;
+    /**
+     * UF do Conselho Profissional
+     */
+    professionalCouncilState?: string;
     attendantState?: State;
     disease?: Disease;
     /**
