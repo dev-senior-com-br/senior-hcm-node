@@ -1,3 +1,9 @@
+# SDK Descontinuada!
+
+Caso julgue necessário o uso de uma SDK, sugerimos a utilização de geradores código a partir do swagger de cada API via ferramenta https://editor.swagger.io/ (Opção Generate Client)
+
+<hr />
+<strike>
 # Senior API SDK para Node.js
 
 Esta biblioteca permite desenvolvedores criar integrações com API HCM da Senior. 
@@ -164,3 +170,4 @@ Criar uma issue [https://github.com/dev-senior-com-br/senior-hcm-node/issues](ht
 ## License
 
 Copyright © 2020.
+</strike>
